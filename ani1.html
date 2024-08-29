@@ -1,0 +1,62 @@
+<!doctype html>
+
+<html>
+
+
+<head>
+<title>Ani</title>
+</head>
+
+
+<style>
+
+@keyframes ani1
+{
+from{opacity:0;}
+to{opacity:1;}
+}
+
+
+@keyframes scrolltext
+{
+from{left:-10%;color:white;}
+to{left:100%;color:red;}
+}
+
+#logo
+{
+font-size:50px;
+font-family:Arial black;
+text-transform:uppercase;
+color:red;
+animation:ani1 1s infinite alternate;
+}
+
+
+
+#mes
+{
+font-size:20px;
+font-family:Arial black;
+color:blue;
+text-transform:uppercase;
+position:relative;
+left:40%;
+animation:scrolltext 4s linear infinite;
+}
+
+</style>
+
+<body>
+
+<div id="logo"> Shivam </div>
+
+
+<div style="background:black;box-shadow:10px 10px 10px gray;padding:20px;">
+<div id="mes">Welcome to My website </div>
+</div>
+
+</body>
+
+<html>
+
