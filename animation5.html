@@ -6,18 +6,32 @@
       weight:100%;
       height:300px;
       box-shadow:10px 10px 10px gray;
+      overflow:hidden;
+      top:0px;
+
     }
-  
+
+.pic
+{
+weight:50%;
+height:100%;
+postion:relative;
+margin-left:-3px;
+transition:2s;
+animation:slide 2s  linear infinite;
+}
+
+    
   </style>
   <body>
     <div id="main">
-      <img src="image/g1.jpg">
+      <img class="pic" src="image/g1.jpg">
       
-      <img src="image/g2.jpg">
+      <img  class="pic" src="image/g2.jpg">
       
-      <img src="image/g3.jpg">
+      <img class="pic"src="image/g3.jpg">
       
-      <img src="image/g4.jpg">
+      <img class="pic" src="image/g4.jpg">
       
     </div>
   </body>
