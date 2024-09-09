@@ -1,0 +1,73 @@
+<!doctype html>
+
+<html>
+
+<head> <title> banner slider</title> </head>
+
+
+
+<style> 
+@keyframes slide
+{
+10%{left:0%}
+20%{left:0%}
+30%{left:-20%}
+40%{left:-20%}
+50%{left:-40%}
+60%{left:-40%}
+70%{left:-60%}
+80%{left:-60%}
+90%{left:-80%}
+100%{left:-80%}
+}
+
+
+
+
+
+#main
+{
+width:600%;
+height:600px;
+box-shadow:10px 10px 10px gray;
+margin-top:20px;
+}
+
+.pic
+{
+width:19%;
+height:600px;
+position:relative;
+margin-left:-5px;
+animation:slide 10s infinite;
+}
+
+h1:hover
+{
+transform:scale(1.09);
+cursor:pointer;
+}
+
+
+</style>
+
+
+
+<body bgColor="#f0f5f5"> 
+<h1 style="text-align:center; font-family:Arial black; transition:2s;"><u>Banner Slider </u></h1>
+
+<div id="mask" style="width:70%; height:580px; overflow:hidden; margin:auto; ">
+
+<div id="main"> 
+	<img class="pic" src="image/g1.jpg">
+	<img class="pic" src="image/g2.jpg">
+	<img class="pic" src="image/g3.jpg">
+	<img class="pic" src="image/g4.jpg">
+	<img class="pic" src="image/g1.jpg">
+
+</div>
+
+</div>
+
+</body>
+</html>
