@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html >
+<head>
+   
+    <title>Registration from</title>
+</head>
+
+<style>
+
+#container
+{
+border-radius:20px ;
+margin:auto;
+border:1px solid gray;
+padding:20px;
+box-shadow:10px 10px 10px gray;
+width:50%;
+}
+
+table
+{
+display:block;
+width:50%;
+//background:red;
+
+}
+
+
+input:invalid
+{
+background:red;
+}
+
+
+input:valid
+{
+background:green;
+border:1px green solid;
+}
+
+input[type="text"]{font-size:15px;width100%;border:1px green ridge;}
+
+</style>
+
+<body>
+    
+
+    <div id="container">
+        <table border="0" cellpadding="20">
+	<form action="https://tataplay/user/login.html" Method="post">
+            <caption>Registration from</caption>
+            <tr>
+                <td><label for="user"> User Name </label></td>
+                <td><input name="user"pattern="[A-Za-z]{3,10}" type="text"   title="Type Name.." placeholder="Type Name here"></td>
+            </tr>
+
+<tr> 
+	<td><label for="age">User Age</label></td> 
+	<td><input id="age" type="number" max="30" min="15 size="100%"></td>
+</tr>
+
+<tr>
+<td> <labe for="massage"> User Massage</label></td>
+<td><textarea id="massage"  placeholder="Type Massage here" cols="60" rows="10"></textarea></td>
+</tr>
+
+
+<tr>
+<td> <labe for="country"> User country</label></td>
+<td>
+<select id="country" size="5" multiple>
+<option >Select your country</option>
+<option value="india">India</option>
+<option value="usa">USA</option>
+<option value="">UK</option>
+<option value="china">China</option>
+<option value="jp">japan</option>
+
+
+</select>
+</td>
+</tr>
+
+
+<tr>
+<td><label for="gender">Gender</label></td>
+<td> 
+Male<input type="Radio" checked value="Male" name="gender"</td>
+Female<input type="Radio" checked value="Female" name="gender"</td>
+other<input type="Radio" checked value="other" name="gender"</td>
+</tr>
+
+
+<tr>
+<td><label for="hobby">Hobby</label></td>
+<td> 
+Reading <input type="checkbox" value="reading">
+Writing <input type="checkbox" value="writing">
+Dancing <input type="checkbox" value="dancing">
+Racing <input type="checkbox" value="racing">
+Cooking <input type="checkbox" value="cooking">
+
+
+</td>
+
+</tr>
+
+
+<tr>
+<td><label for="dob">DOB</label></td>
+<td><input type="date" ></'td>
+</tr>
+
+<tr>
+<td><label for="time">Time</label></td>
+<td><input type="time" ></'td>
+</tr>
+
+<tr>
+<td><label for="upload file">Upload File</label></td>
+<td><input type="file" ></'td>
+</tr>
+
+<tr>
+<td><label for="mycolor">Select color</label></td>
+<td><input type="color" onChange="document.bgColor=this.value" ></'td>
+</tr>
+
+<tr>
+<td><Label id="city"></td>
+<td><input list="city" id="city" name="city" /></'td>
+
+<detalist id="city">
+<option value="Delhi"> </option>
+<option value="Bombay"> </option>
+<option value="calcutta"> </option>
+<option value="UP"> </option>
+<option value="Bihar"> </option>
+<option value="MP"> </option>
+</detalist>
+
+
+</tr>
+
+<tr> <td><input type="submit"  value="Registration"> <input type="reset"></td></tr>
+
+        </table>
+    </div>
+
+</body>
+</html>
