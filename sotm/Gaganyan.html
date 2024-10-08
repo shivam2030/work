@@ -1,0 +1,761 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  
+    <title>Gaganyaan</title>
+</head>
+
+<a name="tp">
+
+<style>
+
+@keyframes defrost
+{
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+
+
+*
+{
+box-sizing:border-box;
+margin:0px;
+
+}
+
+
+
+
+html
+{
+    scroll-behavior: smooth;
+    animation: defrost 1.5s;
+}
+
+
+
+#header
+{
+ width:98%;
+ height:120px;
+ box-shadow:2px 2px 20px white;
+ margin:auto;
+ color:white;
+ border-radius: 20px;
+ text-align: center;
+ font-family: 'Montserrat', sans-serif;
+ font-weight: 700;
+ font-size:35px;
+ padding: 10px;
+border:3px white ridge;
+text-shadow:5px 5px 15px white;
+}
+
+
+#h
+{
+    font-size:20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#menu 
+{
+   width:98%;
+   border-radius: 20px;
+   padding:20px;
+   margin:auto;
+   text-align:center;
+transition: 0.50s;
+
+ 
+}
+
+#menu  li
+{
+width:100%;
+text-align: center;
+transition: 0.50s;
+}
+
+
+#menu ol li
+{
+    display:inline ;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    margin:20px;
+    font-size:20px;
+   transition:0.50s;
+
+}
+
+
+a:link{color:white;text-decoration:none;}
+a:visited{color:white}
+a:hover{text-decoration:none;color:white;}
+
+
+
+#vdo
+{
+    width:98%;
+    height:500px;
+    display: flex;
+    margin:auto;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+}
+#video
+{
+    width: 100%;
+    height: 500px;   
+    border-radius: 20px;
+    object-fit: cover;
+    
+}
+
+
+#about {
+            background: rgb(177, 175, 175); 
+            padding: 20px;
+           color:black;
+           border:6px white ridge;
+            margin: 20px;
+            border-radius: 10px; 
+            box-shadow:2px 2px 20px white;
+            
+        }
+
+        .abt
+        {
+            font-size:30px;
+        }
+
+         .a {
+            font-size: 30px;
+            margin-bottom: 10px;
+           
+        }
+
+
+        .heading {
+            font-size: 30px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            transition: 0.9s; 
+            display: inline-block;
+        }
+
+        .heading:hover {
+            transform: scale(1.2);
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+
+       
+        .para {
+            font-size: 18px;
+            line-height: 1.6; 
+            margin-bottom: 15px; 
+            
+        }
+
+        hr {
+            border: 0;
+            height: 2px;
+            background: rgb(255, 255, 255);
+            margin: 10px 0;
+        }
+
+        .img1
+        {
+            width:100%;
+            border-radius:10px;
+            margin-bottom:20px;
+        }
+        
+        #mission {
+            border:6px white ridge;
+            box-shadow:2px 2px 20px white;
+            width: 60%;
+            background: rgb(177, 175, 175);
+            color:black;
+            padding: 20px;
+            margin: 40px;
+            border-radius: 10px; 
+            float: left;
+            
+        }
+ 
+        
+
+        .mi {
+            font-size: 30px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            transition: 0.9s; 
+            display: inline-block;
+        }
+
+        .mi:hover {
+            transform: scale(1.2);
+            cursor: pointer;
+          text-decoration: underline;
+        }
+
+        .head
+        {
+            width:100%;
+            font-size:25px;
+            text-align: center;
+        }
+
+
+        #info
+        {
+            width: 30%;
+            height:570px;
+            margin:auto;
+            background: black;
+            float: left;
+            border-radius: 20px;
+        }
+
+        .in
+        { 
+            width:100%;
+            height:570px;
+            border-radius: 20px;
+            transition:0.50s;
+        
+        }
+        .in:hover
+        {
+            transform: scale(1.02);
+        }
+
+        #astronaut {
+            border:6px white ridge;
+            box-shadow:2px 2px 20px white;
+            width: 95%;
+            background: rgb(177, 175, 175); 
+            color:rgb(0, 0, 0);
+            padding: 20px;
+            margin: 30px;
+            border-radius: 10px;
+         float: left;
+            
+        }
+
+        .art
+        {
+            font-size: 30px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            transition: 0.9s; 
+            display: inline-block;
+            
+        }     
+
+        .art:hover {
+            transform: scale(1.1);
+            cursor: pointer;
+            text-decoration: underline;
+        }
+        .art1 {
+            font-size: 18px;
+            line-height: 1.6; 
+            margin-bottom: 15px; 
+
+        }
+
+
+        #pic
+        {
+            width: 95%;
+            height:auto;
+            border: 1px white solid;
+            display: flex;
+            flex-wrap: wrap;
+            margin: auto;
+        }
+
+        .pics
+        {
+            width: 100%;
+            height:auto;
+        }
+
+
+        #activities
+        {
+            width: 95%;
+            border: 1px white solid;
+            margin:30px;
+            box-shadow:2px 2px 20px white;
+            background: rgb(177, 175, 175);
+            font-family:'Montserrat', sans-serif;
+        }
+
+        .act
+        {
+            color: rgb(0, 0, 0);
+            text-align: center;
+            font-size: 30px;
+            font-family:'Montserrat', sans-serif;
+            margin:20px;
+        }
+
+        #f1
+        {
+            width: 22%;
+            height: 200px;
+            border: 1px white solid;
+            float: left;
+            margin:17px;
+            color: rgb(0, 0, 0);
+            text-align: justify;
+            padding: 20px;
+            background: rgb(177, 175, 175);
+            transition: 1.2s;
+            font-family:'Montserrat', sans-serif;
+            
+         
+        }
+
+        #f1:hover{
+            transform: scale(1.1);
+            box-shadow:2px 2px 20px white;
+            cursor: pointer;
+            border-radius: 20px;
+        }
+
+        #f2
+        {
+            width: 22%;
+            height: 200px;
+            border: 1px white solid;
+            float: left;
+            margin:17px;
+            color:black;
+            text-align: center;
+            padding:20px;
+            background: rgb(177, 175, 175);
+            transition: 1.2s;
+            font-family:'Montserrat', sans-serif;
+        }
+
+        #f2:hover{
+            transform: scale(1.1);
+            box-shadow:2px 2px 20px white;
+            cursor: pointer;
+            border-radius: 20px;
+        }
+
+        #f3
+        {
+            width: 22%;
+            height: 200px;
+            border: 1px white solid;
+            float: left;
+            margin:17px;
+            color:black;
+            text-align: center;
+            padding:20px;
+            background: rgb(177, 175, 175);
+            transition: 1.2s;
+            font-family:'Montserrat', sans-serif;
+            
+        }
+
+        #f3:hover{
+            transform: scale(1.1);
+            box-shadow:2px 2px 20px white;
+            cursor: pointer;
+            border-radius: 20px;
+        }
+
+        #f4
+        {
+            width: 22%;
+            height: 200px;
+            border: 1px white solid;
+            float: left;
+            margin:17px;
+            color:black;
+            text-align: center;
+            padding:20px;
+            background: rgb(177, 175, 175);
+            transition: 1.2s;
+            font-family:'Montserrat', sans-serif;
+            
+        }
+
+        #f4:hover{
+            transform: scale(1.1);
+            box-shadow:2px 2px 20px white;
+            cursor: pointer;
+            border-radius: 20px;
+        }
+
+
+
+        #f5
+        {
+            width: 22%;
+            height: 200px;
+            border: 1px white solid;
+            float: left;
+            margin:17px;
+            margin-left:150px;
+            color:black;
+            text-align: center;
+            padding:20px;
+            background: rgb(177, 175, 175);
+            transition: 1.2s;
+            font-family:'Montserrat', sans-serif;
+        }
+
+        #f5:hover{
+            transform: scale(1.1);
+            box-shadow:2px 2px 20px white;
+            cursor: pointer;
+            border-radius: 20px;
+        }
+
+
+        #f6
+        {
+            width: 22%;
+            height: 200px;
+            border: 1px white solid;
+            float: left;
+            margin:17px;
+            color:black;
+            text-align: center;
+            padding:20px;
+            background: rgb(177, 175, 175);
+            transition: 1.2s;
+            font-family:'Montserrat', sans-serif;
+        }
+
+        #f6:hover{
+            transform: scale(1.1);
+            box-shadow:2px 2px 20px white;
+            cursor: pointer;
+            border-radius: 20px;
+        }
+
+        #f7
+        {
+            width: 22%;
+            height: 200px;
+            border: 1px white solid;
+            float: left;
+            margin:17px;
+            color:black;
+            text-align: center;
+            padding:20px;
+            background: rgb(177, 175, 175);
+            transition: 1.2s;
+            font-family:'Montserrat', sans-serif;
+        }
+
+        #f7:hover{
+            transform: scale(1.1);
+            box-shadow:2px 2px 20px white;
+            cursor: pointer;
+            border-radius: 20px;
+        }
+
+
+        #f8
+        {
+            width: 22%;
+            height: 200px;
+            border: 1px white solid;
+            float: left;
+            margin:17px;
+            margin-left:320px;
+            color:black;
+            text-align: center;
+            padding:20px;
+            background: rgb(177, 175, 175);
+            transition: 1.2s;
+            font-family:'Montserrat', sans-serif;
+
+        }
+
+        #f8:hover{
+            transform: scale(1.1);
+            box-shadow:2px 2px 20px white;
+            cursor: pointer;
+            border-radius: 20px;
+        }
+
+        #f9
+        {
+            width: 22%;
+            height: 200px;
+            border: 1px white solid;
+            float: left;
+            margin:17px;
+            color:black;
+            text-align: center;
+            padding:20px;
+            background: rgb(177, 175, 175);
+            transition: 1.2s;
+            font-family:'Montserrat', sans-serif;
+        }
+
+        #f9:hover{
+            transform: scale(1.1);
+            box-shadow:2px 2px 20px white;
+            cursor: pointer;
+            border-radius: 20px;
+        }
+
+        .at{
+            font-size: 20px;
+            margin:20px;
+            font-family:'Montserrat', sans-serif;
+            color: rgb(0, 0, 0);
+            text-align: center;
+        }
+
+        
+        .at1{
+            font-size: 20px;
+            margin:20px;
+            font-family:'Montserrat', sans-serif;
+            color: rgb(0, 0, 0);
+            text-align: center;
+        }
+
+                
+        .at2{
+            font-size: 20px;
+            margin:20px;
+            font-family:'Montserrat', sans-serif;
+            color: rgb(0, 0, 0);
+            text-align: center;
+        }
+
+        .at3{
+            font-size: 20px;
+            margin:20px;
+            font-family:'Montserrat', sans-serif;
+            color: rgb(0, 0, 0);
+            text-align: center;
+        }
+
+        .at4{
+            font-size: 20px;
+            margin:20px;
+            font-family:'Montserrat', sans-serif;
+            color: rgb(0, 0, 0);
+            text-align: center;
+        }
+        .at5{
+            font-size: 20px;
+            margin:20px;
+            font-family:'Montserrat', sans-serif;
+            color: rgb(0, 0, 0);
+            text-align: center;
+        }
+
+        .at6{
+            font-size: 20px;
+            margin:20px;
+            font-family:'Montserrat', sans-serif;
+            color: rgb(0, 0, 0);
+            text-align: center;
+        }
+
+        .at7{
+            font-size: 20px;
+            margin:20px;
+            font-family:'Montserrat', sans-serif;
+            color: rgb(0, 0, 0);
+            text-align: center;
+        }
+        .at8{
+            font-size: 20px;
+            margin:20px;
+            font-family:'Montserrat', sans-serif;
+            color: rgb(0, 0, 0);
+            text-align: center;
+        }
+
+        .at9{
+            font-size: 20px;
+            margin:20px;
+            font-family:'Montserrat', sans-serif;
+            color: rgb(0, 0, 0);
+            text-align: center;
+        }
+
+        #footer
+        {
+            width:98%;
+            padding:40px;
+            margin:auto;
+            border-radius: 20px;
+            background: black;
+            text-align: center;
+            display:flex;
+            flex-wrap: wrap;
+            border:1px white solid;
+            color:white;
+            font-family:'Montserrat', sans-serif;
+        }
+
+        .gagan
+        {
+            width:98%;
+            text-align: center;
+            font-size:40px;
+            text-shadow:3px 3px 10px white;
+            font-family:'Montserrat', sans-serif;
+        }
+        
+        .gagan2
+        {
+            width:98%;
+            text-align: center;
+            font-size:20px;
+            margin-top:-60px;
+            font-family:'Montserrat', sans-serif;
+        }
+</style>
+
+
+
+<body  style="background:url(images/view9.jpg)">
+    
+    <div id="header">
+Gaganyaan <br/><span id="h">India’s First Manned Space Mission</span>
+ </div>
+
+
+    
+    <div id="menu">  
+    <ol>
+        <li><a href="#home">Home</a> </li> 
+        <li><a href="#about">About</a>  </li>
+        <li> <a href="#overview"> Mission Overview</a>  </li>
+        <li> <a href="#astronaut"> Astronaut </a> </li>
+       <li> <a href="#activity">Activities</a> </li>
+      
+    </ol>
+    </div> 
+
+
+
+
+<div id="vdo">
+<video id="video" muted loop autoplay>
+    <source src="images/vd3.mp4" type="video/MP4">
+vedio is not supported in your browser
+</video>
+</div>
+
+
+
+<a name="about">
+<div id="about">
+    <h2 class="abt">About Gaganyaan</h2>
+    <hr />
+    
+    <img class="img1"src="images/view8.jpg">
+
+    <h3 class="heading">Introduction to Gaganyaan</h3>
+    <br/>
+
+    <p class="para">Gaganyaan is India’s pioneering effort to send astronauts into space, marking a significant milestone in the nation’s space exploration journey. Spearheaded by the Indian Space Research Organisation (ISRO), this ambitious mission aims to propel India into the exclusive club of countries capable of human spaceflight. By embarking on this journey, India seeks to demonstrate its growing capabilities in advanced aerospace technology and its commitment to scientific discovery. Gaganyaan represents a monumental leap forward in India's quest for space exploration, inspiring future generations to reach for the stars.</p>
+    
+    <h3 class="heading">Objectives</h3>
+    <br/>
+
+    <p class="para">The primary objectives of the Gaganyaan mission are multifaceted, focusing on both technological advancements and scientific exploration. Firstly, the mission aims to successfully send a crew of Indian astronauts into low Earth orbit, a feat that would showcase India's growing prowess in human spaceflight. Additionally, Gaganyaan is designed to facilitate a range of scientific experiments in a microgravity environment, contributing valuable data to various fields, including biology, materials science, and physics. By demonstrating the capabilities of Indian technology, the mission also seeks to position India as a leader in space research and exploration.</p>
+
+    <h3 class="heading">Significance</h3>
+    <br/>
+
+    <p class="para">The Gaganyaan mission holds profound significance for India, both scientifically and nationally. It symbolizes a giant leap in India's space capabilities, instilling a sense of pride and achievement among its citizens. This mission not only enhances India’s reputation on the global stage but also lays the groundwork for future space endeavors, such as lunar and interplanetary missions. Moreover, Gaganyaan has the potential to drive technological innovation and inspire a new generation of scientists and engineers. By engaging in human spaceflight, India emphasizes its commitment to scientific research, technology development, and the betterment of humanity.</p>
+</p>
+</div>
+
+<a name="overview"> 
+<div id="mission">
+    
+    <h2 class="mi">Mission Overview</h2>
+    <br/> <br/>
+
+    <h3 class="head">Mission Time Line</h3>
+    <br/>
+        <p class="para">The Gaganyaan mission began in 2018 with spacecraft development and astronaut training. In 2023, ISRO will launch the first uncrewed mission to test critical systems, followed by a second uncrewed flight in 2024. The final crewed mission is planned for 2024 or early 2025, sending three astronauts into space for 5-7 days. After the mission, the crew module will safely re-enter Earth’s atmosphere. This mission is a stepping stone for future human space exploration, aiming at more ambitious projects like lunar and interplanetary missions.
+
+        The Gaganyaan mission began in 2018 with spacecraft development and astronaut training. In 2023, ISRO will launch the first uncrewed mission to test critical systems, followed by a second uncrewed flight in 2024. The final crewed mission is planned for 2024 or early 2025, sending three astronauts into space for 5-7 days. After the mission, the crew module will safely re-enter Earth’s atmosphere. This mission is a stepping stone for future human space exploration, aiming at more ambitious projects like lunar and interplanetary missions.
+    </p>
+  
+            
+       
+
+
+</div>
+
+
+<div id="info"> <img class="in" src="images/view10.jpg"></div>
+
+<a name="astronaut"> 
+<div id="astronaut">
+
+<h2 class="art">Astronauts </h2><br/> <br/> 
+
+<p class="art1"> The Gaganyaan mission will mark a historic achievement for India as it prepares to send Indian astronauts, known as vyomanauts, into space for the first time. The selected crew comprises three highly trained individuals who are undergoing rigorous training both in India and abroad to ensure they are fully prepared for space travel. These astronauts are being trained in areas such as survival techniques, spacecraft operations, spacewalks, and zero-gravity simulations. Their training is supported by collaborations with international space agencies, including Russia and France. The vyomanauts will represent India on this pioneering mission, orbiting the Earth at a height of 400 km for a duration of 5-7 days, conducting scientific experiments and advancing India’s expertise in human spaceflight. This mission not only demonstrates India’s growing space capabilities but also paves the way for future human space exploration.</p>
+
+</div>
+
+
+<div id="pic"> <img class="pics" src="images/view5.jpg"></div>
+
+<a name="activity"> 
+<div id="activities">
+    <h2 class="act">Activities </h2>
+
+    <div id="f1"> <h3 class="at">Astronaut Training</h3>
+    
+        The selected astronauts, or "vyomanauts," are undergoing intensive training in India and abroad to prepare for space travel.
+
+    </div>
+    <div id="f2"> <h3 class="at1">Crew Module Development</h3>ISRO is designing a secure crew module with advanced life support and communication systems. </div>
+    <div id="f3"> <h3 class="at2">Launch Preparations</h3>The GSLV Mk III rocket and crew module are thoroughly tested for a safe and reliable launch. </div>
+    <div id="f4"><h3 class="at3">Spacecraft Testing</h3>The spacecraft is tested to handle re-entry, navigation, and space's harsh conditions. </div>
+    <div id="f5"><h3 class="at4">Public Outreach</h3>ISRO engages students and the public, promoting interest in space exploration and STEM. </div>
+    <div id="f6"><h3 class="at5">Zero-Gravity Experiments</h3>The mission will conduct experiments in zero gravity to study its effects on various elements. </div>
+    <div id="f7"><h3 class="at6">Life Support Systems</h3>Advanced systems regulate oxygen, temperature, and pressure for astronaut safety. </div>
+    <div id="f8"><h3 class="at7">Crew Safety</h3> Emergency systems, communication channels, and safety suits ensure astronaut protection.</div>
+    <div id="f9"><h3 class="at8">Unmanned Test Flights</h3>  Test flights will validate crew module and rocket systems before the manned mission.</div>
+</div>
+
+
+<div id="footer">
+
+<h1 class="gagan">Gaganyaan</h1>
+
+<br/><br/><br/><br/>
+<h1 class="gagan2">@Gaganyaan Mission 2024 <a href="#top"><img src="images/top.png" width="2%"></a></h1>
+
+
+
+</div>
+
+
+</body>
+
+
+</html>
