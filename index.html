@@ -1,0 +1,321 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Home Page</title>  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">  
+    <style>  
+        body {  
+            background-color: #e9ecef;  
+            font-family: 'Arial', sans-serif;  
+            margin: 0;  
+            padding: 0;  
+            display: flex;  
+            flex-direction: column;  
+            align-items: center;  
+        }  
+
+
+        @keyframes defrost
+{
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+        html {
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+            animation: defrost 1.5s;
+        }
+
+        #header {  
+            width: 100%;  
+            background: #343a40;  /* Dark Header */  
+            color: white;  
+            padding: 15px 0;  
+            text-align: center;  
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);  
+        }  
+
+        #header ol {  
+            padding: 0;  
+            display: flex;  
+            justify-content: center;  
+            text-decoration: none;   
+        }  
+
+        #header ol li {  
+            list-style: none;  
+            margin: 0 20px;  
+            padding: 10px;  
+            font-size: 18px;  
+            transition: color 0.3s, transform 0.3s;
+        }  
+
+        #header ol li:hover {  
+            cursor: pointer;
+            color: #d5e3ef; /* Hover effect */  
+            transform: scale(1.1); /* Scale effect on hover */ 
+        }  
+
+        #header ol li a:visited {
+            color: white; /* Same color as normal state */
+        }
+
+        #header ol li a {
+            color: white;
+            text-decoration: none; /* Remove underline */
+        }
+
+        #container {  
+            display: flex;  
+            align-items: center;  
+            margin: 40px 0;  
+            max-width: 1200px; 
+            width: 80%; 
+            height: 400px;
+            padding: 20px;  
+            border-radius: 8px;  
+            background-color: white; /* White container */  
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);  
+        }  
+
+        #detail {  
+            flex: 1;  
+            text-align: left;  
+            padding: 20px;  
+        }  
+
+        .quote {  
+            font-size: 36px;  
+            color: #212529; /* Dark Text Color */  
+            margin: 0;  
+        }  
+
+        .description {  
+            font-size: 20px;  
+            color: #6c757d; /* Gray Text */  
+            margin: 10px 0; 
+            margin-bottom:80px ; 
+        }  
+
+        #image-container {  
+            flex: 1;  
+            text-align: center;  
+        }  
+
+        .pic {  
+            width: 250px;  
+            height: auto;  
+            border-radius: 50%;  
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);  
+            transition: transform 0.3s;  
+        }  
+
+        .pic:hover {  
+            transform: scale(1.1); /* Scale effect on hover */  
+            box-shadow: 5px 5px 20px #343a40;
+            cursor: pointer;
+        }  
+
+        #social {  
+            margin-top: 20px;
+        }  
+
+        .social-icons {  
+            margin-top: 10px;  
+            margin-left: -14px; 
+        }  
+
+        .social-icons a {  
+            text-decoration: none;  
+            color: #343a40; /* Dark color for icons */  
+            margin: 0 15px;  
+            font-size: 26px;  
+            transition: color 0.3s, transform 0.3s;  
+        }  
+
+        .social-icons a:hover {  
+            color: #5f6a75; /* Hover color */  
+            transform: translateY(-3px); /* Move up effect */  
+        }  
+
+        #about {
+            width: 60%;
+            padding: 20px;
+            background-color: #343a40;
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        #about h1 {
+            font-size: 40px;
+            color: white;
+            margin: 0;
+            cursor: pointer;
+        }
+
+        #ab {
+            width: 80%;
+            background-color: white;
+            border: 0px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); 
+        }
+
+        .ab1 {
+            font-size: 18px;
+            color: #343a40;
+            text-align: justify;
+            line-height: 1.6;
+            font-weight: lighter; /* Lighter font */
+        }
+
+        #skill {
+            width: 60%;
+            padding: 20px;
+            background-color: #343a40;
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        #skill h1 {
+            font-size: 40px;
+            color: white;
+            margin: 0;
+            text-align: center;
+        }
+
+        #add {  
+            display: flex;  
+            align-items: center;
+            justify-content: space-around;
+            margin: 40px 0;  
+            max-width: 1200px; 
+            width: 80%; 
+            height: 400px;
+            padding: 15px;  
+            border-radius: 8px;  
+            background-color: white; /* White container */  
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);  
+        } 
+
+        #pc, #pc2 {
+            width: 150px;
+            height: 150px;
+            transition: 0.3s;
+        }
+
+        #pc:hover, #pc2:hover {
+            filter: drop-shadow(2px 2px 15px #343a40);
+            transform: scale(1.1);
+            cursor: pointer;
+        }
+
+        footer {
+            width: 100%;
+            height: 200px;
+            background-color: #343a40;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+        }
+
+        footer a {
+    color: #e9ecef;
+    text-decoration: none;
+    font-size: 50px;
+}
+
+footer a:hover {
+    color: #d5e3ef; /* Hover effect color */
+    cursor: pointer;
+}
+
+        #name {
+            color: #e9ecef;
+            font-size: 50px;
+        
+        }
+
+        #name:hover
+        {
+            color: #d5e3ef;
+            cursor: pointer;
+            text-decoration: none;
+        }
+    </style>  
+</head>  
+<body>  
+
+
+    <a name="footer">
+<div id="header">  
+    <ol>  
+        <li><a href="#">Home</a></li>  
+        <li><a href="practice.html">Practice Page</a></li>  
+        <li><a href="project.html">Projects</a></li>  
+        <li><a href="#about-section">About</a></li>  
+        <li><a href="#skills-section">Skills</a></li>  
+    </ol>  
+</div>  
+
+<div id="container">  
+    <div id="detail">    
+        <h1 class="quote">I'm a Creative <br/><span style="font-size: 50px;"> UI & UX Designer</span></h1>  
+        <p class="description">Bringing ideas to life through vibrant design and innovative thinking.</p> 
+        <div id="social">  
+            <h2 style="margin-bottom: 10px;">Social Media</h2>  
+            <div class="social-icons">  
+                <a href="https://www.behance.net/shivamprajapati65" target="_blank"><i class="fab fa-behance"></i></a>  
+                <a href="https://www.instagram.com/designnest_3d/?next=%2F" target="_blank"><i class="fab fa-instagram"></i></a>  
+                <a href="https://www.linkedin.com/in/shivam-prajapati-9a0a16318/" target="_blank"><i class="fab fa-linkedin-in"></i></a>  
+            </div>  
+        </div>  
+    </div>  
+
+    <div id="image-container">  
+        <img class="pic" src="image/dp3.jpg" alt="Profile Picture">  
+    </div>  
+</div>  
+
+<hr color="#343a40" size="2" width="100%"/>
+
+<!-- About Section -->
+<a id="about-section"></a>
+<div id="about">
+    <h1>About</h1>
+</div>
+<div id="ab">
+    <p class="ab1">
+        Hi, I'm Shivam Prajapati, a creative graphic designer who is passionate about crafting meaningful and visually appealing designs. I believe in bringing concepts to life that not only look great but also communicate effectively. With expertise in Photoshop, Illustrator, and other design tools, I aim to create designs that leave a lasting impression.
+    </p>
+</div>
+
+<!-- Skills Section -->
+<a id="skills-section"></a>
+<div id="skill">
+    <h1 class="ab1">Skills</h1>
+</div>
+
+<div id="add">
+
+    <div id="pc"> <img src="image\ht.png"></div>
+    <div id="pc2"> <img src="image\cs.png"></div>
+</div>
+
+
+<footer>
+    <h1 id="name"><a href="#footer">Shivam Prajapati</a></h1>
+</footer>
+
+</body>  
+</html>
