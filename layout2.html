@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout</title>
+</head>
+
+<link href="layout2.css" rel="stylesheet" type="text/css">
+
+
+
+<style>
+
+    /* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px)
+ {header{background:red;
+//display:none;
+height:100px;
+}}
+
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) 
+{header{background:cyan;}
+#main{flex-flow:row wrap;}
+#leftbar,#middlebar{width:50%}
+#rightbar{width:100%}
+}
+
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {header{background:yellow;}}
+
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px)
+
+ {header{background:rgb(0, 255, 174);}
+#main{flex-flow:row;}
+#leftbar{width:20%;}
+#middlebar{width:70%}
+#rightbar{width:10%}
+footer{height:300px}
+}
+
+
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px)
+ {header{background:teal;}
+#main{flex-flow:row;}
+#leftbar{width:20%}
+#middle{width:70%}
+rightbar{width:10%}
+}
+
+
+
+
+</style>
+
+
+
+
+
+<body>
+    
+    <header>Header</header>
+    <nav> 
+	<span id="icon" style="cursor:pointer; font-size:40px">&#9776 </span>
+        <ol>
+            <il><a href="#">Home</a></il>
+            <il><a href="#">Product</a></il>
+            <il><a href="#">About</a></il>
+            <il><a href="#">Services</a></il>
+            <il><a href="#">Contact</a></il>
+        </ol>
+    </nav>
+
+
+    <div id="main">
+         <div id="leftbar">Left</div>
+         <div id="middlebar">Midle</div>
+         <div id="rightbar">Right</div>
+ 
+    </div>
+
+
+    <footer>Footer</footer> 
+
+
+
+</body>
+</html> 
