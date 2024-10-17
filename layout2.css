@@ -1,0 +1,162 @@
+*{
+    box-sizing: border-box;
+    transition:0.50s ease;
+    }
+    
+    body{
+    margin:0;
+    padding:0;
+    }
+    
+    nav
+    {
+    width:10%;
+    background:orange;
+    height:60px;
+    }
+    
+    nav:hover ol
+    {
+    //display:block;
+    
+    }
+    
+    nav:hover
+    {
+    display:block;
+    margin-left:0px;
+    width:100%;
+    height:auto;
+    }
+    
+    
+    
+    nav ol{
+    
+    margin-left:-40px;
+    text-align:center;
+    //display:none;
+    }
+    
+    nav ol li {
+    list-style:none;
+    padding:20px;
+    text-align:center;
+    }
+    
+    nav ol li a:link{color:black;text-decoration:none;}
+    nav ol li a:visited{color:black;}
+    nav ol li a:active{color:red}
+    nav ol li a:hover{color:white;text-decoration:underline;}
+    
+    
+    
+    
+    
+    nav ol li:hover
+    {
+    cursor:pointer;
+    background:black;
+    color:white;
+    }
+    
+    nav ol li:hover a
+    {
+    color:white;
+    }
+    
+    
+    
+    
+    
+    header{
+    width:95%;
+    margin:auto;
+    text-align:center;
+    height:400px;
+    padding:10px;
+    background:orange;
+    }
+    
+    
+    
+    
+    
+    
+    #main{
+    background:yellow;
+    
+    display:flex;
+     flex-direction: column;
+    // flex-direction: row;
+     //flex-direction: row-reverse;
+     //flex-wrap: wrap;
+    // flex-wrap: nowrap;
+    // flex-wrap: wrap-reverse;
+     //flex-flow: row wrap;
+    // justify-content: center;
+    //justify-content: flex-start;
+    //justify-content: flex-end;
+     // justify-content: space-around;
+    //justify-content: space-between;
+     //align-items: center;
+    //align-items: flex-start;
+    //align-items: flex-end;
+    //align-items: stretch;
+    // align-content: space-between;
+    //  align-content: space-around;
+     //justify-content: center;
+     // align-items: center;
+    }
+    
+    
+    
+    
+    
+    #leftbar{
+    width:100%;
+    background:red;
+    height:100px;
+    color:white;
+    padding:30px;
+    
+    }
+    
+    #middlebar{
+    width:100%;
+    background:red;
+    height:100px;
+    color:white;
+    
+    
+    
+    }
+    
+    
+    #rightbar
+    {
+    width:100%;
+    background:red;
+    height:100px;
+    color:white;
+    
+    
+    
+    
+    }
+    
+    footer{
+    width:100%;
+    text-align:center;
+    height:100px;
+    padding:10px;
+    background:black;color:white;
+    clear:both;
+    }
+    
+    
+    
+    
+    
+    
+    
