@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+
+
+*
+{
+    scroll-behavior: smooth;
+}
+body{
+    font-family:'Poppins', sans-serif ;
+   
+}
+
+header {
+    width: 100%;
+    height: 85px;
+    background: #F5FFFA;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 0 20px;
+    position: relative;
+}
+
+#logo {
+    font-family: 'Poppins', sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    color: #2F4F4F;
+    position: relative;
+}
+
+#logo:hover {
+    color: #006400; 
+    transition: color 0.3s ease;
+}
+
+.nav {
+    width: 50%;
+    display: flex;
+    
+}
+
+.nav ol {
+    list-style: none;
+    display: flex;
+    margin: auto ;
+   margin-left: 300px;
+   
+}
+
+.nav ol li {
+    margin-left: 25px;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.nav ol li a {
+    color: #2F4F4F;
+    text-decoration: none;
+}
+
+.nav ol li a:hover {
+    
+    text-decoration: underline;
+    color: #006400;
+}
+
+
+.hero
+{
+    width: 100%;
+    height: 550px;
+    background-color: #006400;
+    background: url(images/planepic.jpg) no-repeat center ;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+@keyframes zoomIn {
+    from {
+        
+        opacity: 0;
+    }
+    to {
+        
+        opacity: 1;
+    }
+}
+
+
+#parag {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin-top: -10px;
+    animation: zoomIn 1.5s ease-in-out forwards;
+}
+
+
+.pa {
+    font-size: 55px;
+    color: #d7e1e1;
+    font-family: 'Roboto', sans-serif;
+}
+
+.pa1 {
+    font-size: 25px;
+    color: #d7e1e1;
+    font-family: 'Roboto', sans-serif;
+    margin-top: -25px;
+}
+
+.pa, .pa1 {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+button {
+    width: 200px;
+    height: 40px;
+    background: #2F4F4F;
+    border-radius: 20px;
+    margin-top: 20px;
+    border: none;
+    cursor: pointer;
+    transition: 1s ease-out;
+    
+}
+
+button:hover{
+    transform: scale(1.1);
+}
+button h2 {
+    font-size: 18px;
+    margin: 0;
+    color: #d7e1e1;
+}
+
+.container
+{
+    width: 90%;
+     margin: 50px auto;
+     max-width: 1200px;
+     padding: 20px;
+}
+
+
+.container h1{
+    color: #2F4F4F; 
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.care-section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            color: #006400; /* Dark Green for headings */
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            font-size: 18px;
+            color: #333;
+            line-height: 1.2;
+        }
+
+
+        ul li {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+
+
+        .image-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .image-container img {
+    width: 30%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.image-container img:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3); 
+}
+
+
+footer {
+    background-color: #e6efe6;/
+    color: #006400;
+    padding: 40px 0;
+    text-align: center;
+    margin-top: 50px;
+        }
+
+
+      
+        .footer-container {
+            display: flex;
+            justify-content: space-around;
+            max-width: 1200px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+        }
+
+        .footer-column {
+            flex: 1;
+            margin: 20px;
+        }
+
+      
+        .footer-column h3 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: #006400;
+            cursor: pointer;
+        }
+
+      
+        .footer-column ul {
+            list-style-type: none;
+            padding: 0;
+
+        }
+
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-column ul li a {
+            color: #006400;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-column ul li a:hover {
+            color: #9db09d;
+        }
+
+
+
+
+        .footer-bottom {
+            margin-top: 30px;
+            font-size: 18px;
+            color: #006400;
+        }
+
+</style>
+<body>
+    <a name="home">
+        <header>
+            <div id="logo">Botanical Garden</div>
+            <div class="nav">
+                <ol>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#footer">Contact</a></li>
+                </ol>
+                
+            </div>
+        </header>
+    
+
+
+        
+        <div class="hero">
+            <div id="parag">
+                <h1 class="pa">"Explore the Beauty of Nature"</h1>
+                <p class="pa1">"Discover Our Diverse Collection of Plants and Flowers"</p>
+                <a href="#about"><button><h2>Discover More</h2></button></a>
+            </div>
+        </div>
+
+
+        <a name="about">
+        <div class="container">
+            <h1>Plant Health and Care</h1>
+            <div class="care-section">
+                <h2>Watering Tips</h2>
+                <ul>
+                    <li>Water plants early in the morning or late in the afternoon.</li>
+                    <li>Avoid overwatering; check if the soil is dry before adding more water.</li>
+                    <li>Use a watering can with a gentle spout to avoid damaging delicate plants.</li>
+                </ul>
+    
+                <div class="image-container">
+                    <img src="images/waterplant1.jpg" alt="Watering plants">
+                    <img src="images/waterplant.jpg" alt="Plant care">
+                </div>
+            </div>
+            <div class="care-section">
+                <h2>Soil Care</h2>
+                <ul>
+                    <li>Use well-draining soil to prevent waterlogging.</li>
+                    <li>Mix compost or organic matter into the soil to improve its nutrient content.</li>
+                    <li>Regularly aerate the soil to allow better oxygen flow to the roots.</li>
+                </ul>
+    
+                <div class="image-container">
+                    <img src="images/soil.jpg" alt="Soil care">
+                    <img src="images/soil1.jpg" alt="Plant care">
+                </div>
+            </div>
+    
+            <div class="care-section">
+                <h2>Pest Control</h2>
+                <ul>
+                    <li>Use natural pest repellents like neem oil or insecticidal soap.</li>
+                    <li>Encourage beneficial insects, like ladybugs, to keep pests in check.</li>
+                    <li>Regularly inspect your plants for signs of pests.</li>
+                </ul>
+    
+                <div class="image-container">
+                    <img src="images/pest.jpg" alt="Pest control">
+                    <img src="images/pest1.jpg" alt="Plant care">
+                </div>
+            </div>
+    
+            <div class="care-section">
+                <h2>Sunlight Needs</h2>
+                <ul>
+                    <li>Place plants that need full sun in areas that get 6-8 hours of direct sunlight.</li>
+                    <li>Shaded plants should be placed in areas with indirect sunlight.</li>
+                    <li>Rotate plants occasionally to ensure all sides get sunlight evenly.</li>
+                </ul>
+    
+                <div class="image-container">
+                    <img src="images/sunlight.jpg" alt="Sunlight needs">
+                    <img src="images/sunlight1.jpg" alt="Plant care">
+                </div>
+            </div>
+    
+            <div class="care-section">
+                <h2>Seasonal Care</h2>
+                <ul>
+                    <li>In winter, move sensitive plants indoors or cover them with frost cloths.</li>
+                    <li>Reduce watering in cooler months, as plants need less water.</li>
+                    <li>Fertilize plants in spring to boost growth after dormancy.</li>
+                </ul>
+    
+                <div class="image-container">
+                    <img src="images/winter.jpg" alt="Seasonal care">
+                    <img src="images/winter1.jpg" alt="Plant care">
+                </div>
+            </div>
+        </div>
+
+        <a name="footer">
+            <footer>
+
+                <div class="footer-container">
+
+                 
+
+                   
+                    <div class="footer-column">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About Us</a></li>
+                            
+                           
+                        </ul>
+                    </div>
+        
+
+        
+            
+
+        
+                </div>
+        
+                <!-- Copyright Section -->
+                <div class="footer-bottom">
+                    &copy; 2024 Botanical Garden. All rights reserved.
+                </div>
+            </footer>
+            </footer>
+
+</body>
+</html>
