@@ -5,10 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-
-    <style>
-        .pic{border-top:15 red ridge; transition:0.50s; opacity:0.50;}
-    </style>
 <body>
     
 
@@ -61,32 +57,13 @@ var main =document.createElement("div")
          document.title="Ready"
 
 
-         var mypic = document.createElement("img")
+         var pic = document.createElement("img")
 
          document.body.appendChild(pic)
 
-        mypic.src ="images/p1.jpg"
+        pic.src ="images/p1.jpg"
 
-        mypic.style="width:50%; height:auto; border-radius:60px;cursor:pointer; box-shadow:10px 10px 10px gray; margin:50px; "
-
-        mypic.className="pic"
-        
-
-
-        mypic.onmouseover = function()
-            {
-                mypic.className=""
-                mypic.style.transition="2s"
-                mypic.style.width="300px"
-                mypic.style.height="300px"
-                mypic.style.borderRadius="100px"
-            }
-
-        mypic.onmouseout = function()
-            {
-                mypic.className="pic"
-            }
-        
+        pic.style="width:50%; height:auto; border-radius:60px;cursor:pointer; box-shadow:10px 10px 10px gray; margin:50px;"
     </script>
 </body>
 </html>
