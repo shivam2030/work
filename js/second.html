@@ -64,6 +64,17 @@ var main =document.createElement("div")
         pic.src ="images/p1.jpg"
 
         pic.style="width:50%; height:auto; border-radius:60px;cursor:pointer; box-shadow:10px 10px 10px gray; margin:50px;"
+
+
+        mypic.onmouseover = function()
+            {
+                mypic.className=""
+                mypic.style.transition="2s"
+                mypic.style.width="300px"
+                mypic.style.height="300px"
+                mypic.style.borderRadius="100px"
+            }
+        
     </script>
 </body>
 </html>
