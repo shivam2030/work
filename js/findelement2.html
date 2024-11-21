@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>title</title>
+</head>
+
+<style>
+
+#mypic{
+    width: 50%;
+
+}
+
+
+
+
+
+</style>
+
+
+<body>
+    <h1>Tata</h1>
+
+    <img  id="mypic" src="images/p2.jpg">
+
+  
+
+
+
+<script>
+
+var picture = document.getElementById("mypic")
+
+
+picture.onclick=function()
+
+{
+    picture.style.cursor="pointer"
+    picture.src="images/p3.jpg"
+}
+
+picture.onmouseover=function()
+
+{
+    picture.style="transition:0.50s;"
+    picture.style.cursor="pointer"
+    picture.style.boxShadow="10px 10px 10px gray"
+    picture.style.borderRadius="200px"
+}
+
+picture.onmouseout=function()
+{
+    picture.style="transition:0.50s"
+}
+
+
+
+document.title=("tata")
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+
+#mypic{
+    width: 50%;
+
+}
+
+
+
+
+.mystyle{
+background: black;
+color: aqua;
+padding: 35px;
+box-shadow: 10px 10px 10px yellow;
+}
+
+.t2{
+    font-size: 25px;
+    font-family: verdana;
+    cursor: pointer;
+}
+</style>
+
+
+<body>
+    <h1>Tata</h1>
+
+    <img  id="mypic" src="images/g1.jpg">
+
+    <p class="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam fuga illum dolorum quis officiis vero odio modi recusandae nostrum, excepturi et saepe repellendus ratione, nobis deserunt ex error suscipit omnis.</p>
+
+
+    <p class="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam fuga illum dolorum quis officiis vero odio modi recusandae nostrum, excepturi et saepe repellendus ratione, nobis deserunt ex error suscipit omnis.</p>
+
+    <p class="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam fuga illum dolorum quis officiis vero odio modi recusandae nostrum, excepturi et saepe repellendus ratione, nobis deserunt ex error suscipit omnis.</p>
+</body>
+
+
+<script>
+
+var picture = document.getElementById("mypic")
+
+//alert(picture.s)
+
+
+//searching elements by id (first method)
+picture.src="images/p2.jpg"
+picture.style="border:20px green ridge; cursor:pointer;"
+
+
+//searching elements by tag name (second method)
+
+var myp = document.getElementsByTagName("p")
+//alert(myp)
+
+/*
+myp[0].style="padding:45px; background:yellow;color:black;"
+myp[1].style="padding:45px; background:red;"
+myp[2].style="padding:45px; background:green;"
+*/
+
+
+
+//method three elements by class name (third method)
+
+myp[0].className="mystyle t2"
+myp[1].className="mystyle t2"
+myp[2].className="mystyle t2"
+
+
+</script>
+</html>
