@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+        
+        body{
+            margin: 0%;
+            padding: 0%;
+            transition: 0.50s;
+            cursor: pointer;
+        }
+
+        #mytoolbar{
+            background-color: gray;
+            width: 10%;
+            margin: 40px;
+            position: fixed;
+            top: -10px;
+            padding: 10px;
+
+        }
+
+        p{
+            margin-top: 100px;
+            padding: 20px;
+            font-size: 25px;
+        }
+</style>
+
+<body>
+    
+    <div id="mytoolbar">
+    <input type="color" id="mycolor">
+
+    <input type="range" id="myslider" value="15" type="range" min="15" max="40">
+
+</div>
+
+<p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius itaque quaerat vel. Dicta exercitationem doloremque atque est? Sequi excepturi et sit quis, hic eligendi velit culpa aut officiis dolorem explicabo.
+    Provident ipsum sequi molestias necessitatibus dolorem in veniam culpa, quod eum recusandae sint quo consequatur modi, officia velit earum officiis? Voluptatem cupiditate dignissimos inventore sunt cum? Fuga odit expedita odio.
+    Consequuntur odit fugit libero provident nemo fugiat nobis, nostrum dolores mollitia animi dicta amet suscipit delectus placeat natus debitis ipsum voluptatem nesciunt at neque quasi aliquam doloremque dolor hic? Asperiores.
+    Natus vitae nobis voluptatibus asperiores voluptate, iusto corporis odit repellat vel. Quos nemo officiis provident inventore ex quae, voluptate asperiores maxime numquam cupiditate rerum labore accusamus error voluptatibus et expedita.
+</p>
+
+<script>
+
+    var c = document.getElementById("mycolor")
+
+    var slider = document.getElementById("myslider")
+
+    c.onchange=function()
+
+    {
+        document.body.style.background=this.value
+    }
+
+    slider.onchange=function()
+    {
+        document.title=c.value
+        document.body.style.fontSize=c.value+"px"
+
+        
+    }
+
+
+
+    var pic = document.createElement("img")
+
+    var s = document.createElement("input")
+
+
+    document.body.appendChild(pic)
+    document.body.appendChild(s)
+
+
+    s.type="range"
+    s.min="100"
+    s.max="500"
+
+    s.style="margin-left:-240px;"
+
+
+
+    pic.src="images/p2.jpg"
+    pic.style="width:300px; height:200px; box-shadow:10px 10px 10px gray; margin:40px"
+
+
+    s.onchange=function()
+    {
+        pic.style.width=s.value+"px"
+        pic.style.height=s.value+"px"
+
+        document.title=s.value
+    }
+    
+
+document.title="ready"
+</script>  
+</body>
+</html>
