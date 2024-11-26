@@ -7,100 +7,102 @@
 </head>
 
 <style>
-        
-        body{
-            margin: 0%;
-            padding: 0%;
-            transition: 0.50s;
-            cursor: pointer;
-        }
-
-        #mytoolbar{
-            background-color: gray;
-            width: 10%;
-            margin: 40px;
-            position: fixed;
-            top: -10px;
-            padding: 10px;
-
-        }
+    body{
+        padding: 0%;
+        margin: 0%;
+        transition: 0.80s;    }
 
         p{
-            margin-top: 100px;
-            padding: 20px;
-            font-size: 25px;
+            width: 94%;
+            height: auto;
+            margin: auto;
+        }
+
+        #type{
+            width: 50%;
+            margin: 30px;
+            background-color: aqua;
+            padding: 30px;
+            font-size: 20px;
+            line-height: 2;
+            word-spacing: 5px;
+
+        }
+
+        h1{
+        margin: 20px;
         }
 </style>
 
-<body>
-    
-    <div id="mytoolbar">
-    <input type="color" id="mycolor">
 
-    <input type="range" id="myslider" value="15" type="range" min="15" max="40">
+
+<body>
+
+
+    <h1>On change Function</h1>
+    <div id="type">
+
+  <label for="mycolor">background Color</label>
+
+    <input type="color" id="mycolor" > 
+    
+
+    <label for="myfont">Font Color</label>
+    <input type="color" id="myfont">
+
+    <label for="myslider">Font size</label>
+    <input type="range" min="15" max="50" value="15" id="myslider">
 
 </div>
 
-<p>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius itaque quaerat vel. Dicta exercitationem doloremque atque est? Sequi excepturi et sit quis, hic eligendi velit culpa aut officiis dolorem explicabo.
-    Provident ipsum sequi molestias necessitatibus dolorem in veniam culpa, quod eum recusandae sint quo consequatur modi, officia velit earum officiis? Voluptatem cupiditate dignissimos inventore sunt cum? Fuga odit expedita odio.
-    Consequuntur odit fugit libero provident nemo fugiat nobis, nostrum dolores mollitia animi dicta amet suscipit delectus placeat natus debitis ipsum voluptatem nesciunt at neque quasi aliquam doloremque dolor hic? Asperiores.
-    Natus vitae nobis voluptatibus asperiores voluptate, iusto corporis odit repellat vel. Quos nemo officiis provident inventore ex quae, voluptate asperiores maxime numquam cupiditate rerum labore accusamus error voluptatibus et expedita.
+
+<p class="data">
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt voluptatum nulla, nemo illo quas cupiditate autem optio, reprehenderit placeat repudiandae veniam ea. Veritatis pariatur aliquid fugit, perspiciatis ad aspernatur modi?
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt voluptatum nulla, nemo illo quas cupiditate autem optio, reprehenderit placeat repudiandae veniam ea. Veritatis pariatur aliquid fugit, perspiciatis ad aspernatur modi?
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt voluptatum nulla, nemo illo quas cupiditate autem optio, reprehenderit placeat repudiandae veniam ea. Veritatis pariatur aliquid fugit, perspiciatis ad aspernatur modi?
+</p>
+
+<br/>
+<p class="data">
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt voluptatum nulla, nemo illo quas cupiditate autem optio, reprehenderit placeat repudiandae veniam ea. Veritatis pariatur aliquid fugit, perspiciatis ad aspernatur modi?
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt voluptatum nulla, nemo illo quas cupiditate autem optio, reprehenderit placeat repudiandae veniam ea. Veritatis pariatur aliquid fugit, perspiciatis ad aspernatur modi?
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt voluptatum nulla, nemo illo quas cupiditate autem optio, reprehenderit placeat repudiandae veniam ea. Veritatis pariatur aliquid fugit, perspiciatis ad aspernatur modi?
 </p>
 
 <script>
 
-    var c = document.getElementById("mycolor")
+var theme =document.getElementById("mycolor")
 
-    var slider = document.getElementById("myslider")
 
-    c.onchange=function()
+var ft =document.getElementById("myfont")
 
-    {
-        document.body.style.background=this.value
-    }
+var slider =document.getElementById("myslider")
 
-    slider.onchange=function()
-    {
-        document.title=c.value
-        document.body.style.fontSize=c.value+"px"
-
-        
-    }
+var s= document.getElementsByClassName("data")
+ 
 
 
 
-    var pic = document.createElement("img")
+theme.onchange=function()
+{
+    document.body.style.background=this.value
+}
 
-    var s = document.createElement("input")
+ft.onchange=function()
+{
+    document.body.style.color=this.value
+}
 
-
-    document.body.appendChild(pic)
-    document.body.appendChild(s)
-
-
-    s.type="range"
-    s.min="100"
-    s.max="500"
-
-    s.style="margin-left:-240px;"
-
-
-
-    pic.src="images/p2.jpg"
-    pic.style="width:300px; height:200px; box-shadow:10px 10px 10px gray; margin:40px"
+slider.onchange=function()
+{
+    s[0].style.fontSize=this.value+"px"
+      s[1].style.fontSize=this.value+"px"
+}
 
 
-    s.onchange=function()
-    {
-        pic.style.width=s.value+"px"
-        pic.style.height=s.value+"px"
+</script>
 
-        document.title=s.value
-    }
-    
 
-document.title="ready"
-</script>  
 </body>
+
 </html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    .myp{
+        font-size: 25px;
+        color: black;
+        background: teal;
+        padding:  20px;
+    }
+
+    .pic
+    {
+        width: 30%;
+        cursor: pointer;
+        border: 20px green ridge;
+        margin: 4%;
+    }
+
+    .cli1{
+        background-color: black;
+        
+    }
+
+    .cli2{
+        color: teal;
+        box-shadow: 10px 10px 10px gray;
+    }
+</style>
+
+<body>
+    <h1>On-click Function</h1>
+
+    <p >
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione error ex sed natus vitae praesentium rem, illum vero cupiditate eos! Sapiente corrupti explicabo cum quae quod pariatur molestiae rerum error?
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione error ex sed natus vitae praesentium rem, illum vero cupiditate eos! Sapiente corrupti explicabo cum quae quod pariatur molestiae rerum error?
+    </p>
+
+    <img src="images/g1.jpg">
+
+
+    <h1>On-click Function</h1>
+    <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione error ex sed natus vitae praesentium rem, illum vero cupiditate eos! Sapiente corrupti explicabo cum quae quod pariatur molestiae rerum error?
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione error ex sed natus vitae praesentium rem, illum vero cupiditate eos! Sapiente corrupti explicabo cum quae quod pariatur molestiae rerum error?
+    </p>
+
+    <img src="images/p1.jpg">
+
+
+    <h1>On-click Function</h1>
+
+    <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione error ex sed natus vitae praesentium rem, illum vero cupiditate eos! Sapiente corrupti explicabo cum quae quod pariatur molestiae rerum error?
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione error ex sed natus vitae praesentium rem, illum vero cupiditate eos! Sapiente corrupti explicabo cum quae quod pariatur molestiae rerum error?
+    </p>
+
+    <img src="images/p2.jpg">
+
+    <script>
+
+
+
+/*  h1 manuplated */
+var h = document.getElementsByTagName("h1")
+
+
+
+h[0].style="color:red;font-size:50px; background:black;width:380px;padding:10px;"
+
+
+h[0].onmouseover=function()
+
+{
+    h[0].style="background:red;color:black;padding:20px;font-size:50px; transition:0.60s; cursor:pointer; width:400px;"
+}
+
+h[0].onmouseout=function()
+
+{
+    h[0].style="background:black;color:red;padding:2px;font-size:40px;transition:0.60s;width:350px;"
+}
+
+h[1].style.background="teal"
+h[2].style.fontSize="60px"
+
+
+
+
+/* p tag manuplated */
+var myp = document.getElementsByTagName("p")
+
+myp[0].className="myp"
+myp[1].className="myp"
+myp[2].className="myp"
+
+
+myp[0].onclick=function()
+{
+    this.style.cursor="pointer"
+    this.style.transition="0.60s"
+    this.classList.add("cli1" ,"cli2")
+}
+
+myp.onmouseout=function()
+{
+    h[0].style="background:teal; color:black; padding:0px; font-size:50px;"
+}
+
+myp[1].onmouseover=function()
+{
+    this.style="cursor:pointer; transition:1.1s;transform:scale(1.50) background:red; color:teal;"
+    this.classList.toggle("cli1")
+}
+
+
+myp[1].onmouseout=function()
+{
+    this.style="cursor:pointer; transition:1.1s;transform:scale(1) background:teal; color:black;"
+    this.classList.toggle("cli1")
+}
+
+
+myp[2].onmousemove=function()
+{
+    this.style.cursor="pointer"
+   
+}
+
+/* p img manuplated */
+var mypic = document.getElementsByTagName("img")
+
+mypic[0].className="pic"
+
+mypic[1].className="pic"
+
+mypic[2].className="pic"
+    </script>
+
+</body>
+</html>
