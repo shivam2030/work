@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    .ani
+    {
+        box-shadow: 10px 10px 10px gray;
+        border: 1px solid gray;
+        padding: 20px;
+        transition:0.50s ;
+        cursor: pointer;
+        background:cyan;
+        color: black;
+
+    }
+</style>
+
+
+<body>
+
+    <h1>welcome</h1>
+    <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora perspiciatis accusantium ea modi praesentium ducimus esse ipsum neque sequi temporibus? Quas expedita sint placeat totam quos magni molestias est perspiciatis?
+        Unde officiis ab ipsa voluptatem vero sunt reiciendis eos. Velit, hic quibusdam quo repellendus labore porro doloremque accusantium est odio repudiandae deserunt nobis sint quos id ex iure? At, ut.
+    </p>
+
+<hr/>
+
+    <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora perspiciatis accusantium ea modi praesentium ducimus esse ipsum neque sequi temporibus? Quas expedita sint placeat totam quos magni molestias est perspiciatis?
+        Unde officiis ab ipsa voluptatem vero sunt reiciendis eos. Velit, hic quibusdam quo repellendus labore porro doloremque accusantium est odio repudiandae deserunt nobis sint quos id ex iure? At, ut.
+    </p>
+
+    <hr/>
+
+    <img src="images/g1.jpg">
+
+    <h2>shivam</h2>
+    <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora perspiciatis accusantium ea modi praesentium ducimus esse ipsum neque sequi temporibus? Quas expedita sint placeat totam quos magni molestias est perspiciatis?
+        Unde officiis ab ipsa voluptatem vero sunt reiciendis eos. Velit, hic quibusdam quo repellendus labore porro doloremque accusantium est odio repudiandae deserunt nobis sint quos id ex iure? At, ut.
+    </p>
+
+    <hr/>
+
+
+    <h1>manish</h1>
+
+    <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora perspiciatis accusantium ea modi praesentium ducimus esse ipsum neque sequi temporibus? Quas expedita sint placeat totam quos magni molestias est perspiciatis?
+        Unde officiis ab ipsa voluptatem vero sunt reiciendis eos. Velit, hic quibusdam quo repellendus labore porro doloremque accusantium est odio repudiandae deserunt nobis sint quos id ex iure? At, ut.
+    </p>
+
+    <hr/>
+
+    <img src="images/g2.jpg">
+
+    <h1>manish</h1>
+    <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora perspiciatis accusantium ea modi praesentium ducimus esse ipsum neque sequi temporibus? Quas expedita sint placeat totam quos magni molestias est perspiciatis?
+        Unde officiis ab ipsa voluptatem vero sunt reiciendis eos. Velit, hic quibusdam quo repellendus labore porro doloremque accusantium est odio repudiandae deserunt nobis sint quos id ex iure? At, ut.
+    </p>
+
+    <hr/>
+
+    <img src="images/g3.jpg">
+    <h1>manish</h1>
+    <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora perspiciatis accusantium ea modi praesentium ducimus esse ipsum neque sequi temporibus? Quas expedita sint placeat totam quos magni molestias est perspiciatis?
+        Unde officiis ab ipsa voluptatem vero sunt reiciendis eos. Velit, hic quibusdam quo repellendus labore porro doloremque accusantium est odio repudiandae deserunt nobis sint quos id ex iure? At, ut.
+    </p>
+
+    <hr/>
+
+    <script>
+
+var ptag = document.getElementsByTagName("p")
+
+var pictag = document.getElementsByTagName("img")
+
+
+        pictag[0].style.width="40%"
+        pictag[1].style.width="30%"
+        pictag[0].style.margin="40px"
+        pictag[2].style.width="40%"
+
+
+        for (var i = 0; i < ptag.length; i++) {
+            ptag[i].style.margin = "70px"
+            ptag[i].className="ani"
+
+
+            ptag[i].onclick =function()
+            {
+                this.style.transform="scale(1.10)"
+                this.style.background="black"
+                this.style.color="cyan"
+            }
+
+            ptag[i].onmouseout=function()
+            {
+                this.style.transform="scale(1)"
+                this.style.background="cyan"
+                this.style.color="black"
+            }
+
+        }
+
+       for (var e = 0 ; e<pictag.length; e++)
+
+       {
+        pictag[e].onclick=function()
+        {
+            this.style="width:35%;transform:scale(1.1); transition:0.50s;"
+        }
+
+        pictag[e].onmouseout=function()
+        {this.style="width:30%;transfrom:scale(1);transition:0.50s;"}
+       }
+
+        
+
+
+      
+
+
+        </script>
+    
+</body>
+</html>
