@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+
+.ani
+{
+    width: 20%;
+    height: 200px;
+    box-shadow:10px 10px 10px gray;
+    transition:0.50s;
+    margin: 20px;
+
+}
+
+.ani:hover
+{
+    transform: scale(1.1);
+}
+
+
+.ani1
+{
+    width: 10%;
+    height: 200px;
+    box-shadow:10px 10px 10px gray;
+    transition:0.50s;
+    margin: 20px;
+
+}
+
+.ani1:hover
+{
+    transform: scale(1.1);
+}
+
+</style>
+
+<body>
+    
+
+    <script>
+
+        //images folder  array
+        var pic = document.createElement("img")
+        var plist=["dp.jpg","dp2.jpg","shivam.jpg","WhatsApp Image 2024-09-03 at 21.08.17_f5219c01.jpg"]
+
+
+        //net images
+
+        var netpic =["https://cdn.pixabay.com/photo/2024/02/22/00/27/iguana-8588842_1280.jpg","https://cdn.pixabay.com/photo/2024/03/12/15/42/greylag-goose-8629040_1280.jpg","https://cdn.pixabay.com/photo/2022/08/27/10/08/boat-7414102_1280.jpg","https://cdn.pixabay.com/photo/2022/01/20/15/34/monkey-6952630_1280.jpg"]
+
+
+        for(var i = 1; i<=10; i++)
+
+
+        {
+            document.write("<img class='ani' src='images/p"+i+".jpg'>")
+
+            if(i<4)
+        {
+            document.write("<img class='ani' src='images/g"+i+".jpg'>")
+        }
+
+
+        if(i<2)
+        document.write("<img class='ani1' src='images/"+plist[i]+"' >")
+
+
+
+        if(i<4)
+        
+    document.write("<img class='ani' src='"+netpic[i]+"'>")
+
+    }
+        document.title="no error"
+    </script>
+
+
+
+</body>
+</html>
