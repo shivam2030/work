@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <table>
+    <script>
+        var c = 1 
+        var r = prompt("Enter a number to create Row  ","2")
+
+        var col = prompt("Enter a number to create a column", "2")
+
+        while(c<=r)
+    {
+        document.write("<tr>")
+
+            //nested loop 
+            for(i=1,i<=col, i++)
+        {
+            document.write("<td><input type='text'></td>")
+        }
+
+        document.write("</tr>")
+
+        c++
+    }
+    </script>
+
+</table>
+</body>
+</html>
