@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="f1()">
+
+    <div id="clock" style="font-size: 50px; font-family: arial;  color: aqua;">
+    
+    <script>
+         
+         var c = document.getElementById("clock")
+
+         var d,t
+
+
+         //recusive function
+         function f1() 
+         {
+ 
+             d = new Date()
+
+             c.innerHTML = d.toLocaleTimeString()
+
+             t = setTimeout("f1()",1000)
+             
+         }
+
+         //var t = setInterval("f1()",1000)
+
+    </script>
+
+</div>
+</body>
+</html>
