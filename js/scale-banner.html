@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="runbar()">
+    
+
+    <style>
+
+.pic
+{
+    width: 80%;
+    height: 500px;
+    position: absolute;
+    left: 150px;
+    top:50px;
+}
+    </style>
+<img src="images/g5.jpg" id="g5" class="pic">
+<img src="images/g4.jpg" class="pic" id="g4">
+<img src="images/g3.jpg" id="g3" class="pic"> 
+<img src="images/g2.jpg" id="g2" class="pic"> 
+<img src="images/g1.jpg" id="g1" class="pic"> 
+
+<script>
+
+var g1 = document.getElementById("g1")
+var g2 = document.getElementById("g2")
+var g3 = document.getElementById("g3")
+var g4 = document.getElementById("g4")
+var g5 = document.getElementById("g5")
+
+var c = -1
+
+function runbar()
+{
+if(c<6)
+{
+    c++
+}
+
+else
+{
+    c=1
+}
+
+switch(c)
+{
+    case 1:
+    g1.style.transform="scale(1.1)"
+    break;
+
+    case 2:
+    g2.style.transform="scale(1.1)"
+    break;
+
+    case 3:
+    g3.style.transform="scale(1.1)"
+    break;
+
+    case 4:
+    g4.style.transform="scale(1.1)"
+    break;
+
+    case 5:
+    g5.style.transform="scale(1.1)"
+    break;
+
+    case 6:
+    g1.style.transform="scale(1)"
+
+     g2.style.transform="scale(1)"
+
+      g3.style.transform="scale(1)"
+       g4.style.transform="scale(1)"
+        g5.style.transform="scale(1)"
+   
+}
+
+setTimeout("runbar()",2000)
+
+document.title=c
+}
+
+</script>
+</body>
+</html>

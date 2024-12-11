@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+
+
+    #content
+    {
+        width: 90%;
+        height: 500px;
+        border: 1px solid black;
+    }
+    .pic
+    {
+        width: 80%;
+        box-shadow: 10px 10px 10px gray;
+        position: absolute;
+        height: 500px;
+        left: 150px;
+        top: 50px;
+    }
+</style>
+<body onload="runbar()">
+    
+   
+   
+   
+   
+
+    <img class="pic" id="g5" src="images/g5.jpg">
+    <img class="pic" id="g4" src="images/g4.jpg">
+    <img class="pic" id="g3" src="images/g3.jpg">
+    <img class="pic" id="g2" src="images/g2.jpg">
+    <img class="pic" id="g1" src="images/g1.jpg">
+
+
+  
+
+<script>
+
+var c = 0
+    var g1 = document.getElementById("g1")
+    var g2 = document.getElementById("g2")
+    var g3 = document.getElementById("g3")
+    var g4 = document.getElementById("g4")
+    var g5 = document.getElementById("g5")
+
+ 
+    
+    function runbar()
+    {
+        if(c<6)
+        { c++}
+
+        else
+        {
+            c = 1
+        }
+
+        switch(c)
+        {
+            case 1:
+                g1.style.opacity ="0"
+
+               
+                
+            break;    
+
+            case 2:
+                g2.style.opacity ="0"
+                
+                
+            break; 
+
+            case 3:
+                g3.style.opacity ="0"
+                
+                
+            break; 
+
+            case 4:
+                g4.style.opacity ="0"
+                
+                
+            break; 
+
+            case 5:
+                g5.style.opacity ="0"
+           
+                
+            break; 
+
+            case 6:
+
+            g1.style.opacity ="1"
+             g2.style.opacity ="1"
+              g3.style.opacity ="1"
+               g4.style.opacity ="1"
+                g5.style.opacity ="1"
+
+
+
+            break;
+        }
+
+        setTimeout("runbar()",2000)
+
+        document.title=c
+    }
+
+ 
+</script>
+</body>
+</html>
