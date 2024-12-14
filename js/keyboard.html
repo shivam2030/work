@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+
+.pic
+{
+    width:10%;
+    position:absolute;
+    top:0px;
+    left: 0px;
+}
+</style>
+
+<body>
+
+   
+ 
+    
+    <img src="images/bird.gif" class="pic" id="pic">
+
+
+    <script>
+
+
+var bird = document.getElementById("pic")
+
+//alert(bird.id)
+
+
+//<h1>ASCCI A = 65 = 1000101 </h1>  <h1>Using Keyboard by JS</h1>
+
+var  k,L,t,s;
+
+     L = 0
+     t = 0
+     s = 10
+     
+     function f1(e)
+
+     {
+
+        //alert(e.keyCode)
+
+        k = e.keyCode
+
+        switch (k)
+        {
+            //right arrow
+            case 39:
+
+            bird.style.transform="scaleX(1)"
+
+            if(L<window.innerWidth-100)
+        
+            L=L+s
+     
+            bird.style.left = L+"px"
+            document.title=L
+
+               
+            break;
+
+            case 37:
+
+            bird.style.transform="scaleX(-1)"
+            if(L>=0)
+        {
+            L=L-s
+        }
+        bird.style.left = L+"px"
+            document.title=L
+
+
+               
+            break;
+
+               case 38:
+                if(t>0)
+                {
+                    t=t-s
+                }
+                bird.style.top = t+"px"
+          
+                
+               
+               break;
+
+               case 40:
+                if(t<window.innerHeight-100)
+                {
+                    t=t+s
+                }
+                bird.style.top = t+"px"
+           
+
+               
+               break;
+
+               case 32:
+                if(s<=20)
+                {
+                    s=s+1
+                }
+
+                else{
+                    s=0
+                }
+               
+               break;
+
+              
+        }
+
+     }
+
+     document.addEventListener("keydown", f1)
+
+
+
+    </script>
+</body>
+</html>
