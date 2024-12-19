@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<style>
+    .pic
+    {
+        width: 250px;
+        height: 250px;
+        position: absolute;
+        top:20px;
+        left: 40px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+</style>
+
+
+
+<body id="main">
+
+    <img src="images/p1.jpg"class="pic" id="pic">
+    <script>
+
+
+var p = document.getElementById("pic")
+
+var b  = document.getElementById("main")
+
+var drag = false
+
+p.onclick = function()
+{
+    if (drag)
+{
+    drag = false
+}
+
+else{
+    drag = true
+}
+
+document.title= drag
+}
+
+
+b.onmousemove = function(e)
+{
+    if(drag)
+{
+    p.style.left= -125+e.pageX+"px"
+    p.style.top=-125+e.pageY+"px"
+}
+document.title="x ="+e.pageX+"y"+e.pageY
+
+}
+
+
+document.title="ready"
+
+
+
+    </script>
+    
+
+
+
+</body>
+</html>

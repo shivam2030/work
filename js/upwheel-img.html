@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<style>
+    .pic
+    {
+        width: 250px;
+        height: 250px;
+        position: relative;
+        top:20px;
+        left: 40px;
+        cursor: pointer;
+        transition: 7
+    }
+</style>
+
+
+
+<body id="main">
+
+    <img src="images/p1.jpg"class="pic" id="pic">
+    <script>
+
+
+var p = document.getElementById("pic")
+
+var b  = document.getElementById("b")
+
+var drag = false
+
+i = 1
+
+p.onwheel =function(e)
+{
+
+    document.title=(Math.round(e.deltaY))
+    if(Math.round(e.deltaY)==100)
+{
+
+    document.title=i
+    this.src="images/p"+i+".jpg"
+
+    if(i<10)
+{
+    i++
+}
+
+}
+
+
+if(Math.round(e.deltaY)==-100)
+{
+    document.title=i
+    this.src="images/p"+i+".jpg"
+
+    if(i>1)
+{
+    i--
+}
+}
+
+}
+
+document.title="ready"
+
+
+
+    </script>
+    
+
+
+
+</body>
+</html>

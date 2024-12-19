@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    .pic
+    {
+        width: 250px;
+        height:250px;
+        box-shadow:10px 10px 10px gray;
+        display:block;
+        transition:0.5s;
+        margin:auto;
+        cursor: pointer;
+
+
+    }
+</style>
+<body>
+    <img src="images/p1.jpg" class="pic" id="pic">
+
+
+    <script>
+
+
+        var p = document.getElementById("pic")
+        w = 250
+         
+        h =250
+
+
+   p.onwheel = function(e)
+        {
+
+
+
+
+            document.title = Math.round(e.deltaY) 
+
+        if((Math.round(e.deltaY)== 100)&&(w<=550))
+        {
+
+            w+=10
+            h+=10
+         this.style.width=w+"px"
+         this.style.height=h+"px"
+        }
+           
+
+        if((Math.round(e.deltaY)==-100)&&(w>=250))
+        {
+
+            w-=10
+            h-=10
+
+            this.style.width=w+"px"
+            this.style.height=h+"px"
+
+
+
+        }
+
+
+
+
+
+
+
+        }
+
+
+document.title ="ready"
+
+
+
+
+
+    </script>
+
+
+    
+
+
+</body>
+</html>
