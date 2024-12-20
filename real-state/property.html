@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <title>Buy and Sell Properties | Shaan Villas</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #f8f9fc;
+        }
+
+        
+              /* Navigation Bar */
+              nav {
+            width: 100%;
+            height: 80px;
+            background-color: #3a3a3a;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 40px;
+           
+            top: 0;
+            z-index: 10;
+        }
+
+        .logo {
+            font-size: 26px;
+            color: #ef6627;
+            font-weight: 600;
+        }
+
+        .link ol {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+        }
+
+        .link ol li {
+            color: #ffffff;
+            font-size: 16px;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .link ol li a {
+        color: #fff;
+        text-decoration: none;
+        }
+
+        .link ol li:hover {
+            color: #ef6627;
+        }
+
+        .register {
+            font-size: 16px;
+            
+            padding: 10px 20px;
+            border: 1px solid #ffffff;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .register a 
+        {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .register:hover {
+            background-color: #ef6627;
+            color: #fff;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: url('image/buy.jpg') center/cover no-repeat;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+        }
+
+        .hero h1 {
+            font-size: 50px;
+            margin-bottom: 10px;
+            background-color: #393939;
+            padding: 10px;
+        }
+
+        .hero p {
+            font-size: 25px;
+            padding: 10px;
+          color: #ccc;
+          background-color: #393939;
+        }
+
+        .sh-bar {
+            margin: 20px auto;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .sh-bar input, .sh-bar select, .sh-bar button {
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .sh-bar button {
+            background-color: #ef6627;
+            color: #fff;
+            cursor: pointer;
+            border: none;
+        }
+
+        /* Property Listings Section */
+        .properties {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .properties h2 {
+            font-size: 36px;
+            color: #ef6627;
+            margin-bottom: 20px;
+        }
+
+        .property-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .property-card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            text-align: left;
+            transition: transform 0.3s ease;
+        }
+
+        
+
+        .property-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .property-card:hover {
+            transform: scale(1.03);
+        }
+
+        .property-details {
+            padding: 15px;
+        }
+
+        .property-details h3 {
+            font-size: 20px;
+            color: #393939;
+        }
+
+        .property-details p {
+            font-size: 16px;
+            color: #666;
+            margin: 10px 0;
+        }
+
+        .property-details button {
+            padding: 10px 20px;
+            background-color: #ef6627;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .property-details button a{
+        color:  #fff;
+        text-decoration: none;
+        } 
+
+           /* Sell Property Section */
+           .sell-property {
+            background-color: #f4f4f4;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .sell-property h2 {
+            font-size: 36px;
+            color: #ef6627;
+            margin-bottom: 20px;
+        }
+
+        .sell-form {
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .sell-form input, .sell-form textarea, .sell-form button {
+            padding: 5px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+           
+        }
+
+        .sell-form button {
+            background-color: #ef6627;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        .sell-form textarea {
+            resize: none;
+        }
+
+
+        
+
+.pro-head
+{
+    width: 100%;
+    height: 100px;
+    color: #ef6627;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pro
+{
+
+    width: 100%;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: space-around;
+    
+}
+
+.pro-card
+{
+    width: 30%;
+    height: 150px;
+    background-color: #ddd;
+    margin-bottom: 25px;
+}
+
+.pro-pic
+{
+    width: 100%;
+    height: 230px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.pro h2
+{
+   padding: 10px;
+   background-color: #ddd;
+}
+
+.pro p{
+    padding: 10px;
+    background-color: #ddd;
+    margin-bottom: 10px;
+}
+
+
+.pro-see
+{
+    width: 90%;
+    height: 50px;
+    text-align: end;
+    font-size: 20px;
+    margin: 10px;
+    color: #e55b00;
+}
+
+.pro-see a
+{
+    color: #ef6627;
+}
+
+.buy-head{
+
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #e55b00;
+}
+
+
+.buy
+{
+    width: 100%;
+    height: 150px;
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-around;
+    line-height: 2;
+   
+}
+
+.buy-card
+{
+    width: 30%;
+    height: 100px;
+    background-color: #ccc ;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.buy-card:hover{
+    transform: scale(0.9);
+}
+
+.buy h2{
+    color: #eb3535;
+    font-size: 20px;
+    margin-top:10px ;
+
+    
+}
+
+
+            
+
+.ft{
+    width: 100%;
+    height: 370px;
+    background: #3a3a3a;
+    display: flex;
+    padding:20px;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 40px}
+
+.shan-ft{
+    width:30% ;
+    height: 300px;
+    ackground:rgb(0, 0, 0) ;
+    padding:25px;
+    text-align: center;
+    color: #ef6627;
+}
+
+.shan-ft p{ margin-top: 20px; font-size: 20px;color: #ddd; }
+
+.sc
+{
+    width: 100%;
+    height: 80px;
+    ackground-color: #ddd;
+    margin-top: 50px;
+}
+
+.sc h1{
+    font-size: 25px;
+    margin-bottom: 10px;
+  
+    
+}
+
+.hv
+{
+    margin: 10px;
+    font-size: 25px;
+    transition: 0.50s;
+    color: #ddd;
+}
+
+.hv:hover
+{
+    color: black;
+    
+}
+
+.lk-ft{
+    width: 30%;
+    height: 300px;
+    ackground-color: black;
+    text-align: center;
+    padding: 20px;
+   
+}
+
+.lk-ft h1{
+    font-size:25px ;
+    color: aliceblue;
+
+}
+
+
+.lk-ft ol{
+    color: #ddd;
+    line-height: 2.5;
+    list-style: none ;
+    margin-top: 5px;}
+
+
+    .lk-ft ol a{ 
+    color: #ddd ;
+    text-decoration: none;
+    }
+
+
+
+
+
+
+.cn-ft
+{
+    width: 30%;
+    height: 300px;
+    ackground-color: black;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  
+}
+
+.Contact-add 
+{
+    width: 80%;
+    height: 120px;
+    ackground-color: rgb(255, 255, 255);
+    text-align: left;
+    line-height: 1.5;
+    color: #ddd;
+   
+
+}
+
+.Contact-add  h3
+{
+    color: #ef6627;
+}
+
+.Contact-add p a { color: #ef6627;}
+
+
+.subscribe-section {  
+    width: 80%;
+    color: #e55b00;
+    line-height: 2;
+   
+}  
+
+input[type="email"] {  
+    padding: 10px;  
+    width: 250px;  
+    border: none;  
+    border-radius: 5px;  
+    margin-right: 10px;  
+}  
+
+button {  
+    padding: 10px 20px;  
+    background-color: #ff6600;  
+    border: none;  
+    border-radius: 5px;  
+    color: white;  
+    cursor: pointer;  
+    margin-top: 15px;
+    margin-bottom:20px;
+}  
+
+button:hover {  
+    background-color: #e55b00;  
+}  
+
+
+.uline
+{
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    color: #ddd;
+    padding: 10px;
+}
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Shaan Villas</div>
+        <div class="link">
+            <ol>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#state"> Luxury Estates</a></li>
+                <li><a href="about-file.html"> About Us</a></li>
+                
+                <li><a href="property.html"> Properties</a></li>
+                <li><a href="Contact.html"> Contact</a></li>
+                
+            </ol>
+        </div>
+        <div class="register"><a href="login.html"> Login</div></a>
+    </nav>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div>
+            <h1>Buy and Sell Properties</h1>
+            <p>Find your dream home or list your property for sale</p>
+        </div>
+    </section>
+
+    <!-- Search Bar -->
+    <div class="sh-bar">
+        <input type="text" placeholder="Enter Location">
+        <select>
+            <option>Type</option>
+            <option>Residential</option>
+            <option>Commercial</option>
+        </select>
+        <input type="text" placeholder="Price Range">
+        <button>Search</button>
+    </div>
+
+    <!-- Properties Section -->
+    <section class="properties">
+        <h2>Available Properties</h2>
+        <div class="property-grid">
+            <div class="property-card">
+                <img src="image/dwarka.jpg" alt="Property Image">
+                <div class="property-details">
+                    <h3>Modern Villa in Dwarka</h3>
+                    <p>Price: ₹1.5 Cr | Location: Dwarka, Delhi</p>
+                    <button><a href="dwarka.html"> View Details</a></button>
+                </div>
+            </div>
+            <div class="property-card">
+                <img src="image/luxury.jpg" alt="Property Image">
+                <div class="property-details">
+                    <h3>Luxury Apartment in Gurugram</h3>
+                    <p>Price: ₹2.3 Cr | Location: Gurugram, Haryana</p>
+                    <button><a href="luxury.html" >View Details</a></button>
+                </div>
+            </div>
+
+            
+             
+            
+                    <div class="property-card">
+                        <img src="image/central-delhi.jpg" alt="Central Delhi Estates">
+                        <div class="property-details">
+                            <h3>Central Delhi Estates</h3>
+                            <p>Price: ₹2.5 Cr | Location: Connaught Place, Delhi</p>
+                            <button><a href="central.html"> View Details</a></button>
+                        </div>
+                    </div>
+                    <div class="property-card">
+                        <img src="image/mixed.jpg" alt="Luxury State Apartments">
+                        <div class="property-details">
+                            <h3>Luxury State Apartments</h3>
+                            <p>Price: ₹3 Cr | Location: Greater Kailash, Delhi</p>
+                            <button><a href="luxury.html" >View Details</a></button>
+                        </div>
+                    </div>
+                    <div class="property-card">
+                        <img src="image/south.jpg" alt="Green Spaces in South Delhi">
+                        <div class="property-details">
+                            <h3>Green Spaces in South Delhi</h3>
+                            <p>Price: ₹1.8 Cr | Location: Hauz Khas, Delhi</p>
+                            <button><a href="south.html"> View Details </a></button>
+                        </div>
+                    </div>
+                    <div class="property-card">
+                        <img src="image/karol.jpeg" alt="Karol Bagh Commercial Hub">
+                        <div class="property-details">
+                            <h3>Karol Bagh Commercial Hub</h3>
+                            <p>Price: ₹4 Cr | Location: Karol Bagh, Delhi</p>
+                            <button> <a href="karol.html"> View Details</a></button>
+                        </div>
+                    </div>
+                </div>
+           
+            
+        </div>
+    </section>
+
+
+    
+    <div class="pro-head"> 
+        <h1>Types of Properties</h1>
+
+    </div>
+
+
+
+    <div class="pro">
+        <div class="pro-card">
+            <img class="pro-pic" src="image/residential.jpg">
+            <h2>Residential Property</h2>
+            <p>Includes houses, apartments, and villas designed for living purposes.</p>
+
+        </div>
+
+        <div class="pro-card">
+            <img class="pro-pic" src="image/commercial.jpg">
+            <h2>Commercial Property</h2>
+            <p>Comprises offices, retail spaces, and shopping malls for business use.</p>
+
+        </div>
+
+        
+        <div class="pro-card">
+            <img class="pro-pic" src="image/industrial Property.jpg">
+            <h2>Industrial Property</h2>
+            <p>Warehouses, factories, and manufacturing units fall under this category.</p>
+
+        </div>
+
+        <div class="pro-card">
+            <img class="pro-pic" src="image/agricultural.jpg">
+            <h2>Agricultural Property</h2>
+            <p>Land used for farming, cultivation, or related agricultural activities.</p>
+
+        </div>
+
+        <div class="pro-card">
+            <img class="pro-pic" src="image/mixed.jpg">
+            <h2>Mixed-Use Property</h2>
+            <p>A combination of residential, commercial, and recreational spaces.</p>
+
+        </div>
+
+
+
+
+
+        <div class="pro-card">
+            <img class="pro-pic" src="image/Luxury-pro.jpg">
+            <h2>Luxury Property</h2>
+            <p>Premium properties such as penthouses, estates, and high-end villas.</p>
+
+        </div>
+
+    </div>
+
+    <div class="pro-see">
+        
+        <p><i><a href="property.html">see more</i></a> </p>
+
+    </div>
+
+
+
+
+    <div class="buy-head">
+        <h1>Simple Steps to Buy a Property</h1>
+
+    </div>
+
+
+    <div class="buy">
+        <div class="buy-card">
+
+            <h2>Define Requirements</h2>
+            <p>Set your budget, location, and property type.</p>
+        </div>
+
+
+        <div class="buy-card">
+            <h2>Search for Properties</h2>
+            <p>Browse online listings or consult agents.</p>
+
+        </div>
+
+        <div class="buy-card">
+            <h2>Verify Legal Documents</h2>
+            <p>Ensure clear ownership and no disputes.</p>
+
+        </div>
+    </div>
+    
+
+
+    <div class="buy-head">
+        <h1>Simple Steps to Sell a Property</h1>
+
+    </div>
+    
+    <div class="buy">
+        <div class="buy-card">
+
+            <h2>Prepare Your Property</h2>
+            <p>Clean, repair, and stage your property.</p>
+        </div>
+
+
+        <div class="buy-card">
+            <h2>Set the Right Price</h2>
+            <p>Use market analysis for a fair price.</p>
+
+        </div>
+
+        <div class="buy-card">
+            <h2>List Your Property</h2>
+            <p>Post on online platforms with great photos.</p>
+
+        </div>
+    </div>
+    
+
+
+
+
+
+    <!-- Sell Property Section -->
+    <section class="sell-property">
+        <h2>Sell Your Property</h2>
+        <form class="sell-form">
+            <input type="text" placeholder="Property Title">
+            <input type="text" placeholder="Location">
+            <input type="text" placeholder="Price">
+            <textarea placeholder="Property Details" rows="5"></textarea>
+            <input type="file" accept="image/*">
+            <button>Submit</button>
+        </form>
+    </section>
+    
+        
+    <footer class="ft">
+
+    
+        <div class="shan-ft">
+            <h1>Shan villas </h1>
+            <p>
+                "Transforming Spaces into Luxurious Shan Villas for You"</p>
+    
+            <div class="sc">
+                <h1> Links
+                    
+                </h1>
+                 <a class="hv"><i class="fab fa-facebook"></i></a>  
+                    <a class="hv"> <i class="fab fa-instagram"></i></a>  
+                    <a class="hv"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="hv"><i class="fab fa-twitter"></i></a>
+                
+    
+            </div>
+    
+    
+    
+        </div>
+    
+        <div class="lk-ft">
+    
+            <h1>Quick Links</h1>
+    
+           
+        <ol>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about-file.html">About</a></li>
+            <li><a href="about-file.html">Services</a></li>
+            <li><a href="property.html">Properties</a></li>
+            <li><a href="about-file.html">FAQs</a></li>
+        </ol>
+    
+        </div>
+    
+        <div class="cn-ft">
+    
+           <div class="Contact-add">
+            <h3>Contact Us</h3>
+            <p>Email: <a href="mailto:info@southdelhiapartments.com">info@southdelhiapartments.com</a></p>
+            <p>Phone: +91 98765 67890</p>
+            <p>Address: Hauz Khas, South Delhi, India</p>
+            
+        </div>
+    
+            <div class="subscribe-section">  
+                <h3>Subscribe Now</h3>  
+                <input type="email" placeholder=" Enter your Email" required>  
+                <button type="submit">Subscribe</button>  
+            </div>  
+        </div>
+    
+        <div class="uline">
+            <hr/>
+            <p>�� 2022 Shan Villas. All rights reserved.</p>
+             
+        </div>
+    
+    
+    </footer>
+    
+    
+    </body>
+    </html>
+    
+    
