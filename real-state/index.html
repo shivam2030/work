@@ -1,0 +1,1180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <title>Real Estate | Shaan Villas</title>
+    <style>
+        /* Keyframes */
+        @keyframes textAnimation {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+
+
+
+
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #f8f9fc;
+        }
+
+        /* Navigation Bar */
+        nav {
+            width: 100%;
+            height: 80px;
+            background-color: #3a3a3a;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 40px;
+            position: fixed;
+            top: 0;
+            z-index: 10;
+        }
+
+        .logo {
+            font-size: 26px;
+            color: #ef6627;
+            font-weight: 600;
+        }
+
+        .link ol {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+        }
+
+        .link ol li {
+            color: #ffffff;
+            font-size: 16px;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .link ol li a {
+        color: #fff;
+        text-decoration: none;
+        }
+
+        .link ol li:hover {
+            color: #ef6627;
+        }
+
+        .register {
+            font-size: 16px;
+            
+            padding: 10px 20px;
+            border: 1px solid #ffffff;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .register a 
+        {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .register:hover {
+            background-color: #ef6627;
+            color: #fff;
+        }
+
+        /* Hero Section */
+        .home {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            height: 540px;
+            padding: 0 40px;
+            background-color: #f8f9fc;
+            margin-top: 80px;
+            border-bottom:1px #ef6627 solid;
+        }
+
+        .detail {
+            width: 48%;
+            padding: 20px;
+            animation: textAnimation 1.5s ease-out forwards;
+        }
+
+        .detail h1 {
+            font-size: 40px;
+            color: #ef6627;
+            margin-bottom: 10px;
+        }
+
+        .detail p {
+            color: #494949;
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .call {
+            width: 30%;
+            height: auto;
+            padding: 10px 20px;
+            font-size: 18px;
+            color: #ffffff;
+            background-color: #ef6627;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition:  0.50s ease-in-out;
+        }
+
+        .call:hover {
+            
+            width: 31%;
+        
+        }
+
+        .call a{text-decoration: none;color:white;font-weight: bold;}
+
+        .info
+        {
+            width: 90%;
+            height: 100px;
+            //background-color: #494949;
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            //border-bottom:1px #ef6627 solid;
+            gap:40px;
+
+            
+        }
+
+        .info-d{
+            text-align: center;
+            
+        }
+
+        .info h2{
+            color:#ef6627;
+            font-size: 30px;
+            margin-bottom: 5px;
+            
+
+        }
+
+        .info p{
+            color: #393939;
+           font-size: 16px;
+            
+            text-align: center;
+        
+        }
+        /* Hero Image */
+        .home-pic {
+    width: 45%;
+    //height: 500px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+
+    
+    
+}
+
+        .home-pic img {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 10px;
+            animation: textAnimation 1.5s ease-out forwards;
+           
+            
+        }
+
+        /*luxury*/
+        .luxury
+        {
+            width: 100%;
+            height: 150px;
+            text-align: center;
+            padding: 40px 60px;
+            //background-color: #494949;
+            margin: auto;
+            margin-bottom: 10px;
+        }
+
+        .luxury h1{
+            font-size: 35px;
+            color: #ef6627;
+            margin-bottom: 20px;
+        }
+        
+        .luxury p
+        {
+            font-size: 20px;
+            color:#393939;
+            margin-bottom: 20px;
+        }
+
+        .luxury-detail {
+    width: 100%;
+    height: 900px;
+    //background-color: #393939;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px; /* Add space between items */
+    padding: 20px 0;
+
+    animation: textAnimation 1.5s ease-out forwards;
+}
+
+.luxury-info {
+    width: 27%;
+    height: 380px;
+   background-color: aliceblue;
+   //box-shadow: 5px 5px 20px  #393939;
+    margin-bottom: 20px; /* Optional: Add space below each item */
+    text-align:center;
+    
+}
+
+
+.pic-info{
+    width: 99%;
+    height: 200px;
+    background: #393939;
+    margin: auto;
+    object-fit: cover;
+    transition: 0.5s;
+    border-radius: 10px;
+   
+}
+
+.pic-info:hover
+{
+    transform: scale(1.01);
+    
+   
+}
+
+.luxury-pic {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    cursor: pointer;
+
+}
+
+.luxury-info h1{
+    font-size:30px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 80%;
+    margin: auto;
+    margin-top: 10px;
+    
+}
+
+.luxury-info p{
+    font-size: 16px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+
+}
+
+.luxury-info button{
+    width: 35%;
+    height: 40px;
+    border: none;
+    font-size: 15px;
+    border-radius: 10px;
+    background-color: #ef6627;
+    color: aliceblue;
+    margin-top: 10px;
+}
+
+
+.luxury-info button:hover{
+    cursor: pointer;
+}
+
+.luxury-info button a {color: aliceblue; text-decoration: none;} 
+
+
+
+/* About Us Short Section */
+.about-short {
+    width: 100%;
+    background-color: #f8f9fc;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.about-short h1 {
+    font-size: 36px;
+    color: #ef6627;
+    margin-bottom: 10px;
+}
+
+.about-short p {
+    font-size: 18px;
+    color: #494949;
+    line-height: 1.8;
+}
+
+.read-more {
+    display: inline-block;
+    font-size: 16px;
+    color: #ef6627;
+    text-decoration: none;
+    margin-top: 10px;
+    transition: color 0.3s;
+}
+
+.read-more:hover {
+    color: #3a3a3a;
+}
+
+/* Testimonials Section */
+.testimonials {
+    width: 100%;
+    padding: 40px 20px;
+    background-color: #f8f9fc;
+    text-align: center;
+}
+
+.testimonials h1 {
+    font-size: 36px;
+    color: #ef6627;
+    margin-bottom: 30px;
+}
+
+.testimonials-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.testimonial {
+    width: 30%;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.testimonial:hover {
+    transform: scale(1.05);
+}
+
+.testimonial p {
+    font-size: 16px;
+    color: #494949;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+.testimonial h3 {
+    font-size: 18px;
+    color: #ef6627;
+}
+
+
+
+
+
+
+
+.ft{
+    width: 100%;
+    height: 370px;
+    background: #3a3a3a;
+    display: flex;
+    padding:20px;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 40px}
+
+.shan-ft{
+    width:30% ;
+    height: 300px;
+    ackground:rgb(0, 0, 0) ;
+    padding:25px;
+    text-align: center;
+    color: #ef6627;
+}
+
+.shan-ft p{ margin-top: 20px; font-size: 20px;color: #ddd; }
+
+.sc
+{
+    width: 100%;
+    height: 80px;
+   
+    margin-top: 50px;
+}
+
+.sc h1{
+    font-size: 25px;
+    margin-bottom: 10px;
+  
+    
+}
+
+.hv
+{
+    margin: 10px;
+    font-size: 25px;
+    transition: 0.50s;
+    color: #ddd;
+}
+
+.hv:hover
+{
+    color: black;
+    
+}
+
+.lk-ft{
+    width: 30%;
+    height: 300px;
+    ackground-color: black;
+    text-align: center;
+    padding: 20px;
+   
+}
+
+.lk-ft h1{
+    font-size:25px ;
+    color: aliceblue;
+
+}
+
+
+.lk-ft ol{
+    color: #ddd;
+    line-height: 2.5;
+    list-style: none ;
+    margin-top: 5px;}
+
+
+    .lk-ft ol a{ 
+    color: #ddd ;
+    text-decoration: none;
+    }
+
+
+
+
+
+
+.cn-ft
+{
+    width: 30%;
+    height: 300px;
+    ackground-color: black;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  
+}
+
+.Contact-add 
+{
+    width: 80%;
+    height: 120px;
+    ackground-color: rgb(255, 255, 255);
+    text-align: left;
+    line-height: 1.5;
+    color: #ddd;
+   
+
+}
+
+.Contact-add  h3
+{
+    color: #ef6627;
+}
+
+.Contact-add p a { color: #ef6627;}
+
+
+.subscribe-section {  
+    width: 80%;
+    color: #e55b00;
+    line-height: 2;
+   
+}  
+
+input[type="email"] {  
+    padding: 10px;  
+    width: 250px;  
+    border: none;  
+    border-radius: 5px;  
+    margin-right: 10px;  
+}  
+
+button {  
+    padding: 10px 20px;  
+    background-color: #ff6600;  
+    border: none;  
+    border-radius: 5px;  
+    color: white;  
+    cursor: pointer;  
+    margin-top: 15px;
+    margin-bottom:20px;
+}  
+
+button:hover {  
+    background-color: #e55b00;  
+}  
+
+
+.uline
+{
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    color: #ddd;
+    padding: 15px;
+   
+}
+
+
+
+
+
+
+.fet
+{
+    width: 100%;
+    height: 120px;
+    background: #f8f9fc;
+    text-align: center;
+    line-height: 2;
+    
+
+   
+   
+}
+
+.fet h1
+{
+    color: #ef6627;
+    font-size: 36px;
+}
+
+
+.fet p{
+    font-size: 18px;
+    color: #494949;
+  
+    font-style: italic;
+}
+
+.slider
+{
+    width:100% ;
+    height: 350px;
+   
+    overflow: hidden;
+ 
+}
+
+
+.slide
+{
+    width: 350%;
+    height: 350px;
+    
+    position:relative;
+    display: flex;
+    align-items: center;
+    
+    animation:scrolltext, scrolltext2  18s linear infinite;
+    gap: 20px;
+ 
+  
+   
+}
+
+
+.slide-ani
+{
+    width: 8%;
+    height: 350px;
+    
+   
+}
+
+
+
+
+.slide-pic
+{
+    width: 100%;
+    height: 350px;
+    border-radius: 20px;
+}
+
+.slide-ani p {
+    font-size: 25px ;
+  position: relative;
+    padding: 1px;
+   background-color:white;
+   border-radius: 20px;
+    color: #e55b00;
+    margin-top:-80px;
+    text-align: center;
+}
+
+@keyframes scrolltext1
+{
+from{left:-10%;}
+to{left:100%;}
+}
+
+
+@keyframes scrolltext2
+{
+from{right:0%;}
+to{right:100%;}
+}
+
+
+
+
+.pro-head
+{
+    width: 100%;
+    height: 100px;
+    color: #ef6627;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pro
+{
+
+    width: 100%;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: space-around;
+   
+   
+    
+}
+
+
+
+.pro-card
+{
+    width: 30%;
+    height: 200px;
+    background-color: #ddd;
+    margin-bottom: 25px;
+  
+}
+
+.pro-pic
+{
+    width: 100%;
+    height: 230px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.pro h2
+{
+   padding: 9px;
+   background-color: #ddd;
+}
+
+.pro p{
+    padding: 9px;
+    background-color: #ddd;
+    margin-bottom: 10px;
+}
+
+
+.pro-see
+{
+    width: 90%;
+    height: 50px;
+    text-align: end;
+    font-size: 20px;
+    margin-top: 10px;
+    color: #e55b00;
+}
+
+.pro-see a
+{
+    color: #ef6627;
+}
+
+
+
+
+
+
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">Shaan Villas</div>
+        <div class="link">
+            <ol>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#state"> Luxury Estates</a></li>
+                <li><a href="about-file.html"> About Us</a></li>
+                
+                <li><a href="property.html"> Properties</a></li>
+                <li><a href="Contact.html"> Contact</a></li>
+                
+            </ol>
+        </div>
+        <div class="register"><a href="login.html"> Login </a></div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="home">
+        <div class="detail">
+            <h1>Shaan Villas – Redefining Luxury Living</h1>
+            <p>Experience unparalleled luxury with Shaan Villas. Our exclusive properties offer breathtaking designs, sophisticated interiors, and are crafted for those who value the finest details in every aspect of living.</p>
+            <button class="call"><a href="#state">Explore More</a> </button>
+
+            <div class="info">
+
+            <div class="info-d">
+                <h2>10k+</h2>
+                <p>Premium Product</p>
+            </div>
+
+            <div class="info-d">
+                <h2>2k+</h2>
+                <p>Happy Customer</p>
+            </div>
+
+            <div class="info-d">
+                <h2>28+</h2>
+                <p>Awards winning</p>
+            </div>
+
+            </div>
+
+
+        </div>
+        <div class="home-pic">
+            
+            <img class="pics1" src="image/re6.jpg" alt="Luxury Villa">
+
+
+        </div>
+    </header>
+
+    <!--luxury section-->
+   <a name="state">
+       <div class="luxury">
+        <h1>
+            "Discover Unmatched Elegance and Comfort"
+        </h1>
+
+        <p>
+            "Indulge in a world where every estate is crafted to perfection, offering luxury, sophistication, and tranquility at its finest."
+        </p>
+    </div>
+
+
+
+    <div class="luxury-detail">
+    
+
+        <div class="luxury-info">
+
+            <div class="pic-info">
+            <img class="luxury-pic" src="image/dwarka.jpg">
+        </div>
+
+        <h1>
+            Modern Dwarka Apartments
+        </h1>
+
+        <p>
+            "Smartly designed apartments with family-friendly amenities."
+        </p>
+
+        <button> <a href="dwarka.html"> Details</button></a> 
+        </div>
+
+        <div class="luxury-info">
+
+            <div class="pic-info">
+                <img class="luxury-pic" src="image/gateway.jpg">
+            </div>
+    
+            <h1>
+                Gurugram Gateway Villas
+            </h1>
+    
+            <p>
+                "Luxurious villas with private pools and smart technology."
+            </p>
+    
+            <button><a href="gurugram.html"> Details</button></a>
+            </div>
+
+        
+
+
+        <div class="luxury-info">
+
+            <div class="pic-info">
+                <img class="luxury-pic" src="image/central.jpg">
+            </div>
+    
+            <h1>
+                Central Delhi Estates
+            </h1>
+    
+            <p>
+                "Premium residences in the heart of Delhi with unmatched luxury."
+            </p>
+    
+            <button> <a href="central.html"> Details</button></a>
+            </div>
+
+        
+
+       
+
+        
+        <div class="luxury-info">
+
+            <div class="pic-info">
+                <img class="luxury-pic" src="image/luxury.jpg">
+            </div>
+    
+            <h1>
+                Luxury State Apartments
+            </h1>
+    
+            <p>
+             
+"Elegant apartments with premium amenities in prime Delhi locations."
+            </p>
+    
+            <button> <a href="luxury.html"> Details</button></a>
+            
+        </div>
+
+        <div class="luxury-info">
+
+            <div class="pic-info">
+                <img class="luxury-pic" src="image/south.jpg">
+            </div>
+    
+            <h1>
+                Green Spaces in South Delhi
+            </h1>
+    
+            <p>
+                "Serene homes with lush surroundings and urban connectivity."
+            </p>
+    
+            <button> <a href="south.html">  Details</button></a>
+            </div>
+
+
+      
+
+        <div class="luxury-info">
+
+            <div class="pic-info">
+                <img class="luxury-pic" src="image/karol.jpeg">
+            </div>
+    
+            <h1>
+                Karol Bagh Commercial Hub
+            </h1>
+    
+            <p>
+                "Prime spaces perfect for business in a bustling area."
+            </p>
+    
+            <button> <a href="karol.html"> Details</button></a>
+        </div>
+    </div>
+
+
+    
+    <section class="about-short">
+        <div class="about-content">
+            <h1>About Us</h1>
+            <p>
+                At Shaan Villas, we believe in creating more than just homes—we craft luxurious lifestyles. With prime locations, sophisticated designs, and unparalleled attention to detail, we set the benchmark for modern living. 
+                <a href="about-file.html" class="read-more">Read More</a>
+            </p>
+        </div>
+    </section>
+
+    <div class="pro-head"> 
+        <h1>Types of Properties</h1>
+
+    </div>
+
+
+
+    <div class="pro">
+        <div class="pro-card">
+            <img class="pro-pic" src="image/residential.jpg">
+            <h2>Residential Property</h2>
+            <p>Includes houses, apartments, and villas designed for living purposes.</p>
+
+        </div>
+
+        <div class="pro-card">
+            <img class="pro-pic" src="image/commercial.jpg">
+            <h2>Commercial Property</h2>
+            <p>Comprises offices, retail spaces, and shopping malls for business use.</p>
+
+        </div>
+
+        
+        <div class="pro-card">
+            <img class="pro-pic" src="image/industrial Property.jpg">
+            <h2>Industrial Property</h2>
+            <p>Warehouses, factories, and manufacturing units fall under this category.</p>
+
+        </div>
+
+        <div class="pro-card">
+            <img class="pro-pic" src="image/agricultural.jpg">
+            <h2>Agricultural Property</h2>
+            <p>Land used for farming, cultivation, or related agricultural activities.</p>
+
+        </div>
+
+        <div class="pro-card">
+            <img class="pro-pic" src="image/mixed.jpg">
+            <h2>Mixed-Use Property</h2>
+            <p>A combination of residential, commercial, and recreational spaces.</p>
+
+        </div>
+
+
+
+
+
+        <div class="pro-card">
+            <img class="pro-pic" src="image/Luxury-pro.jpg">
+            <h2>Luxury Property</h2>
+            <p>Premium properties such as penthouses, estates, and high-end villas.</p>
+
+        </div>
+
+
+
+
+
+
+        
+
+
+
+    </div>
+
+    <div class="pro-see">
+        
+        <p><i><a href="property.html">see more</i></a> </p>
+
+    </div>
+
+
+    
+<div class="fet">
+    
+    <h1>Featured Locations</h1>
+    <p>Find your home in the city of your choice</p>
+     
+</div>
+
+
+    
+<div class="slider">
+
+    <div class="slide">
+    
+        <div class="slide-ani">
+            <img class="slide-pic" src="image/central-delhi.jpg">
+
+            <p>Central-Delhi</p>
+    
+        </div>
+    
+        <div class="slide-ani">
+            <img class="slide-pic" src="image/world-hotel.jpg">
+            <p>World Class Hotel</p>
+    
+        </div>
+    
+        <div class="slide-ani">
+            <img class="slide-pic" src="image/park.jpg">
+            <p>Parks</p>
+    
+        </div>
+    
+        <div class="slide-ani">
+            <img class="slide-pic" src="image/dwarka-school.jpg">
+
+            <p>Dwarka Schools</p>
+        </div>
+    
+        <div class="slide-ani">
+            <img class="slide-pic" src="image/global-gurugram.jpg">
+            <p>Global Gurugram</p>
+    
+        </div>
+    
+        <div class="slide-ani">
+            <img class="slide-pic" src="image/karol-area.jpg">
+            <p>Karol Bhag Area</p>
+    
+        </div>
+    
+        <div class="slide-ani">
+            <img class="slide-pic" src="image/pre-hotel.jpg">
+
+            <p>Premium Hotels</p>
+    
+        </div>
+    
+        <div class="slide-ani">
+            <img class="slide-pic" src="image/central-prime.jpg">
+            <p>Central-Prime</p>
+    
+        </div>
+    
+    </div>
+    
+    
+    </div>
+
+  
+
+
+
+
+
+
+    <!-- Client Testimonials Section -->
+<section class="testimonials">
+    <h1>What Our Clients Say</h1>
+    <div class="testimonials-container">
+        <div class="testimonial">
+            <p>"Shaan Villas truly redefines luxury living. The attention to detail and the quality of their projects are unmatched. My family and I couldn't be happier!"</p>
+            <h3>- Rahul Sharma</h3>
+        </div>
+        <div class="testimonial">
+            <p>"Investing in Shaan Villas has been one of the best decisions of my life. The location, design, and support have exceeded my expectations."</p>
+            <h3>- Priya Malhotra</h3>
+        </div>
+        <div class="testimonial">
+            <p>"Shaan Villas made our dream home come true! The team was extremely professional and provided exceptional service throughout."</p>
+            <h3>- Vikram Singh</h3>
+        </div>
+    </div>
+</section>
+
+
+
+
+<footer class="ft">
+
+    
+    <div class="shan-ft">
+        <h1>Shan villas </h1>
+        <p>
+            "Transforming Spaces into Luxurious Shan Villas for You"</p>
+
+        <div class="sc">
+            <h1> Links
+                
+            </h1>
+             <a class="hv"><i class="fab fa-facebook"></i></a>  
+                <a class="hv"> <i class="fab fa-instagram"></i></a>  
+                <a class="hv"><i class="fab fa-linkedin-in"></i></a>
+                <a class="hv"><i class="fab fa-twitter"></i></a>
+            
+
+        </div>
+
+
+
+    </div>
+
+    <div class="lk-ft">
+
+        <h1>Quick Links</h1>
+
+        <ol>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about-file.html">About</a></li>
+            <li><a href="about-file.html">Services</a></li>
+            <li><a href="property.html">Properties</a></li>
+            <li><a href="about-file.html">FAQs</a></li>
+        </ol>
+
+    </div>
+
+    <div class="cn-ft">
+
+       <div class="Contact-add">
+        <h3>Contact Us</h3>
+        <p>Email: <a href="mailto:info@southdelhiapartments.com">info@southdelhiapartments.com</a></p>
+        <p>Phone: +91 98765 67890</p>
+        <p>Address: Hauz Khas, South Delhi, India</p>
+        
+    </div>
+
+        <div class="subscribe-section">  
+            <h3>Subscribe Now</h3>  
+            <input type="email" placeholder=" Enter your Email" required>  
+            <button type="submit">Subscribe</button>  
+        </div>  
+    </div>
+
+    <div class="uline">
+        <hr/>
+        <p>�� 2022 Shan Villas. All rights reserved.</p>
+         
+    </div>
+
+
+</footer>
+
+    
+</body>
+</html>
