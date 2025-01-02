@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<style>
+
+#color
+{
+    position:absolute;
+    left: 20px;
+
+}
+
+
+#slider
+{
+    position:absolute;
+    left:100px;
+}
+
+
+</style>
+
+
+<body>
+
+    <input type="color" id="color">
+
+    
+    <input type="range" min="2" max="50" id="slider">
+
+
+    <canvas id="canvas"></canvas>
+    
+    <script>
+
+        var colorbox = document.getElementById("color")
+
+        var slider = document.getElementById("slider")
+
+        var can = document.getElementById("canvas")
+
+        var c = can.getContext("2d")
+
+        var w = window.innerWidth
+
+        var h = window.innerHeight
+
+        var drawmode = false
+
+        var mx = 0 
+        var my = 0
+
+        can.width = w
+
+        can.height = h
+
+        var drawcolor = "red"
+
+        var brushsize = 10
+
+
+        can.onclick = function()
+        {
+            if(drawmode)
+        {
+            drawmode = false
+
+          
+        }
+
+        else{
+            drawmode = true
+        }
+
+        document.title = drawmode
+        }
+
+        colorbox.onchange = function()
+        {
+            drawcolor =this.value
+
+            document.title = drawcolor
+        }
+
+
+        slider.onchange = function()
+        {
+            brushsize = this.value
+
+            document.title = brushsize
+        }
+
+        //event handle
+
+        function draw(e)
+        {
+            mx = e.pageX
+
+            my =e.pageY
+
+            document.title= "x ="+e.pageX+"...y ="+e.pageY
+
+            c.beginPath()
+
+            if(drawmode)
+        {
+            c.arc(mx,my,brushsize,0,2*Math.PI)
+        }
+
+        c.fillStyle = drawcolor
+
+        c.fill()
+
+
+        
+        
+        }
+
+        function f1(e)
+       {
+        //alert(e.keyCode)
+
+        if(e.keyCode==67)
+       {
+            c.clearRect(0,0,w,h)
+       }
+       }
+
+
+
+
+        document.addEventListener("mousemove", draw)
+        
+        document.addEventListener("keydown", f1)
+
+
+
+
+document.title = "ready"
+
+
+
+
+
+    </script>
+
+
+</body>
+</html>
