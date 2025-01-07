@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+    #bt1, #bt2, #bt3, #bt4
+    {
+        position: absolute;
+       width: 8%;
+       border-radius: 20px;
+       
+       background-color: black;
+        padding: 6px;
+        border: none;
+        cursor: pointer;
+        color: aqua;
+    }
+    #bt1{
+        
+        left: 260px;
+    }
+    #bt2{
+        
+        left: 370px;
+    }
+    
+    #bt3{
+        
+        left: 500px;
+    }
+    
+    #bt4{
+        
+        left: 630px;
+    }
+    
+    #range
+    {
+        position: absolute;
+        left: 80px;
+    }
+    #color
+    {
+        position: absolute;
+     
+    }
+
+    
+    
+
+</style>
+<body>
+
+    <input type="color" id="color">
+    <input type="range" id="range">
+    <button id="bt1" onclick="drawrectangle()" >Rectangle</button>
+    <button id="bt2" onclick="drawcircle()" >Circle</button>
+    <button id="bt3" onclick="drawline()">line</button>
+    <button id="bt4" onclick="clear()" >Clear</button>
+    <canvas id="mycan"></canvas>
+    
+    <script>
+        var can = document.getElementById("mycan")
+        var colorbox = document.getElementById("color")
+        var slider = document.getElementById("range")
+
+        var c = can.getContext("2d")
+        var w = window.innerWidth
+         var h = window.innerHeight
+         var drawmode = false
+         var dbo = 1
+        var mx = 0
+        var my = 0
+        var drawcolor = "red"
+        var brushsize = 10
+
+        can.onclick = function()
+        {
+            if(drawmode)
+            {
+                drawmode = false
+            }
+
+            else
+            {
+                drawmode = true
+            }
+            document.title =  drawmode
+        }
+
+        colorbox.onchange = function()
+        {
+            drawcolor = this.value
+           
+        }
+      
+        slider.onchange = function()
+        {
+            brushsize = this.value
+            document.title =  brushsize
+        }
+
+        //event handler
+
+        function draw(e)
+        {
+            mx = e.pageX
+            my = e.pageY
+
+            c.beginPath()
+
+            if((dbo == 2 )&&(drawmode))
+        {
+            drawmode =  true
+
+            c.rect(mx,my,brushsize,brushsize)
+            c.fillStyle = drawcolor
+            c.fill()
+        }
+        if((dbo == 3 )&&(drawmode))
+        {
+            drawmode =  true
+
+            c.arc(mx,my,brushsize,0,2*Math.PI)
+            c.fillStyle = drawcolor
+            c.fill()
+        }
+        }
+
+        function drawrectangle()
+        {
+            dbo = 2
+            document.title = "drawing with" +dbo
+        }
+
+        function mclear()
+        {
+            document.title="clear"
+            c.clearRect(0,0,w,h)
+        }
+
+        function drawcircle()
+        {
+            dbo = 3
+            document.title = "draw circle"
+        }
+
+        document.addEventListener("mousemove",draw)
+
+        document.title="ready"
+    </script>
+</body>
+</html>
