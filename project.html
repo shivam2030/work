@@ -1,25 +1,22 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project</title>
+    <title>Practice</title>
 </head>
-
 <style>
-
-
-body {
+    body {
         margin: 0;
         padding: 0;
         font-family: 'Arial', sans-serif;
         background-color: #f4f4f4;
     }
 
-.main
-{
-    
-     width: 80%;
+    /* Header Styling */
+    #main {
+        width: 80%;
     height: 100px;
     padding: 20px;
     background: #343a40;
@@ -30,20 +27,10 @@ body {
     border-radius: 10px;
     color: #e9ecef;
     margin: auto;
-
-}
-
-
-#content {
-        width: 80%;
-        margin: 40px auto;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
     }
 
-
-    #content2 {
+    /* Main Content Container */
+    #content {
         width: 80%;
         margin: 40px auto;
         display: flex;
@@ -52,7 +39,7 @@ body {
     }
 
     /* Box Styling */
-    .con {
+    .con, .con2 {
         width: 22%; /* Adjusted width for better responsiveness */
         height: 60px;
         background-color: #343a40;
@@ -68,29 +55,62 @@ body {
     }
 
     /* Hover Effect */
-    .con:hover {
+    .con:hover, .con2:hover {
         transform: translateY(-5px); /* Lift effect */
         box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
     }
 
     /* Link Styling */
-    .name a{
+    .name a, .name2 a {
         color: #ffffff;
         text-decoration: none;
         font-weight: bold;
         font-size: 18px;
     }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .con, .con2 {
+            width: 45%; /* Adjust width for smaller screens */
+            height: 70px;
+        }
+        #main {
+            font-size: 40px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .con, .con2 {
+            width: 80%; /* For mobile view */
+            height: 80px;
+        }
+        #main {
+            font-size: 35px;
+            height: 80px;
+            padding: 10px;
+        }
+    }
+
 </style>
+
 <body>
-    <div class="main">
-            <div content>Projects Work</div>
-    </div>
 
+<div id="main">Projects</div>
 
-    <div id="content2">
-        <div class="con"><h2 class="name"><a href="sotm/Gaganyan.html">Gaganyan</a></h2></div>
+<div id="content">
+   
+    <div class="con"><h2 class="name"><a href="sotm/Gaganyan.html">Gaganyan</a></h2></div>
         <div class="con"><h2 class="name"><a href="sotm2/index.html">Botanical Garden</a></h2></div>
            <div class="con"><h2 class="name"><a href="real-state/index.html">Real State</a></h2></div>
-    </div>
+
+</div>
+
+ 
+
+
+ 
+
+  
+
 </body>
 </html>
