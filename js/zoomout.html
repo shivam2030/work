@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        cursor: pointer;
+    }
+
+
+    .pic
+    {
+       text-align: center;
+       transition: 1.50s;
+       width: 50%;
+       height: 560px;
+       box-shadow: 10px 10px 10px gray;
+       padding: 10px;
+       margin: 50px; 
+       border-radius: 20px;
+    }
+
+    .zoomout
+    {
+        transform: scale(0.0);
+    }
+
+    .hidetext
+    {
+        opacity: 0;
+        transition: 1.50s;
+        width: 100%;
+        padding: 20%;
+        margin: 20px;
+        font-size:15px;
+        text-align: justify;
+    }
+
+    .showtext
+    {
+        opacity: 1;
+    }
+    
+</style>
+<body>
+    
+    <h1>Using HTML Tag By JS</h1>
+    <img src="images/p1.jpg" alt="pic" id="p1" class="pic">
+    <img src="images/p2.jpg" alt="pic" id="p2" class="pic">
+    <img src="images/p3.jpg" alt="pic" id="p3" class="pic">
+    <img src="images/p4.jpg" alt="pic" id="p4" class="pic">
+    <img src="images/p5.jpg" alt="pic" id="p5" class="pic">
+    <img src="images/p6.jpg" alt="pic" id="p6" class="pic">
+
+
+ 
+
+<script>
+    var myp = document.querySelectorAll("img"); // Select all images
+var p = document.querySelectorAll("p"); // Select all paragraphs
+
+// Adding classes to images
+for (var i = 0; i < myp.length; i++) {
+    myp[i].classList.add("pic");
+}
+
+// Adding classes to paragraphs
+for (var i = 0; i < p.length; i++) {
+    p[i].classList.add("hidetext");
+}
+
+document.title = "no error";
+
+document.body.onscroll = function () {
+    document.title = pageYOffset;
+    
+    var sp = Math.round(pageYOffset); // Corrected from pageXOffset to pageYOffset
+
+    if (sp > 270) myp[0].classList.add("zoomout");
+    if (sp > 700) myp[1].classList.add("zoomout");
+    if (sp > 1200) myp[2].classList.add("zoomout");
+    if (sp > 1800) myp[3].classList.add("zoomout");
+    if (sp > 2700) myp[4].classList.add("zoomout");
+    if (sp > 3200) myp[5].classList.add("zoomout");
+
+    // Removing class
+    if (sp < 270) myp[0].classList.remove("zoomout");
+    if (sp < 700) myp[1].classList.remove("zoomout");
+    if (sp < 1200) myp[2].classList.remove("zoomout");
+    if (sp < 1800) myp[3].classList.remove("zoomout");
+    if (sp < 2700) myp[4].classList.remove("zoomout");
+    if (sp < 3200) myp[5].classList.remove("zoomout");
+
+}
+
+
+</script>
+
+</body>
+</html>
