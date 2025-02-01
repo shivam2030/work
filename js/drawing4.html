@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <canvas id="mycanvas" style="border: 1px black solid" width="1200" height="1800"></canvas>
+
+    <script>
+    const canvas = document.getElementById("mycanvas");
+    const context = canvas.getContext("2d");
+
+    let isDrawing = false;
+    let x = 0;
+    let y = 0;
+
+    // Touch event listeners
+    canvas.addEventListener("touchstart", (event) => {
+        event.preventDefault();
+        x = event.touches[0].clientX;
+        y = event.touches[0].clientY;
+        isDrawing = true;
+    });
+
+    canvas.addEventListener("touchmove", (event) => {
+        event.preventDefault();
+        if (!isDrawing) return;
+        
+        context.beginPath();
+        context.moveTo(x, y);
+        
+        x = event.touches[0].clientX;
+        y = event.touches[0].clientY;
+        
+        context.lineTo(x, y);
+        context.stroke();
+    });
+
+    canvas.addEventListener("touchend", () => {
+        isDrawing = false;
+    });
+
+    // Mouse event listeners
+    let mouseDown = false;
+    canvas.addEventListener("mousedown", function (e) {
+        mouseDown = true;
+        context.beginPath();
+        context.moveTo(e.offsetX, e.offsetY);
+    });
+
+    canvas.addEventListener("mouseup", function () {
+        mouseDown = false;
+    });
+
+    canvas.addEventListener("mousemove", function (e) {
+        if (!mouseDown) return;
+        context.lineTo(e.offsetX, e.offsetY);
+        context.stroke();
+    });
+
+    // Erase button
+    var erase = document.createElement("div");
+    erase.innerHTML = "Erase";
+    erase.style.position = "absolute";
+    erase.style.top = "50px";
+    erase.style.fontSize = "50px";
+    erase.style.right = "0px";
+    erase.style.background = "white";
+    erase.style.padding = "10px";
+    erase.style.cursor = "pointer";
+    document.body.appendChild(erase);
+
+    erase.addEventListener("click", function () {
+        context.clearRect(0, 0, canvas.width, canvas.height);
+    });
+
+    // Color picker
+    var color = document.createElement("input");
+    color.type = "color";
+    color.style.width = "10%";
+    color.style.height = "3%";
+    color.style.position = "absolute";
+    color.style.top = "50px";
+    color.style.left = "100px";
+    document.body.appendChild(color);
+
+    color.addEventListener("change", function () {
+        context.strokeStyle = color.value;
+    });
+
+    // Rubber (Eraser)
+    var rubber = document.createElement("div");
+    rubber.innerHTML = "Rubber";
+    rubber.style.position = "absolute";
+    rubber.style.top = "50px";
+    rubber.style.right = "200px";
+    rubber.style.fontSize = "50px";
+    rubber.style.backgroundColor = "white";
+    rubber.style.padding = "10px";
+    rubber.style.cursor = "pointer";
+    document.body.appendChild(rubber);
+
+    rubber.addEventListener("click", function () {
+        context.strokeStyle = "white";
+    });
+
+    // Erase width slider
+    var eraseWidth = document.createElement("input");
+    eraseWidth.type = "range";
+    eraseWidth.min = "1";
+    eraseWidth.max = "100";
+    eraseWidth.value = "10";
+    eraseWidth.style.position = "absolute";
+    eraseWidth.style.top = "25px";
+    eraseWidth.style.width = "20%";
+    eraseWidth.style.right = "500px";
+    document.body.appendChild(eraseWidth);
+
+    eraseWidth.addEventListener("change", function () {
+        context.lineWidth = eraseWidth.value;
+    });
+
+    // Save drawing function
+    function savedraw() {
+        let fname = prompt("File name.. File will be saved in PNG format", "mydraw");
+        let dataURL = canvas.toDataURL();
+
+        let link = document.createElement("a");
+        link.href = dataURL;
+        link.download = fname + ".png";
+        link.click();
+    }
+
+    </script>
+
+</body>
+</html>
