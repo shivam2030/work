@@ -1,0 +1,185 @@
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: 'popins', sans-serif;
+}
+
+body{
+    background-color: aliceblue;
+    
+}
+
+.container{
+padding: 20px;
+width:330px;
+background-color: white;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+border-radius: 8px;
+box-shadow: rgba(0,0,0,0.1) 0px 10px 15px -3px,rgba(0,0,0,0.5) 0px 4px 6px -2px;
+
+}
+
+.container .app-name
+{
+    height: 40px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-top-left-radius:7px;
+    border-top-right-radius:7px;
+    box-shadow: rgba(99,99,99,0.2) 0px 2px 8px 0px;
+    display: flex;
+    align-items: center;
+    padding: 15px ;
+    font-size:20px;
+    color: #131418;
+}
+
+.container fieldset
+{
+    all: unset;
+    border: 1px solid grey;
+    border-radius:3px;
+    height:50px;
+}
+
+.container fieldset span
+{
+    margin-left: 8px;
+    position: absolute;
+    font-size:16px;
+}
+
+.container fieldset input
+{
+    all: unset;
+    width: 90%;
+    height: 35px;
+    margin-top: -10px;
+    font-size: 14px;
+    
+}
+
+.container fieldset legend
+{
+    margin-left: 10px;
+    font-size: 13px;
+    color: grey;
+}
+
+.container .fieldset-one
+{
+    margin-top:40px;
+    width: 100%;
+
+}
+
+.container .fieldset-one input
+{
+    margin-left: 25px;
+
+}
+
+.container .fieldset-two, .container .fieldset-three
+{
+    width: 45%;
+    margin-top: 10px;
+    float: left;
+}
+
+.container .fieldset-three
+{
+    margin-left:25px;
+}
+
+.container .fieldset-two span, .container .fieldset-three span
+{
+    margin-left:80px;
+
+}
+
+
+.container .fieldset-two input, .container .fieldset-three input
+{
+    width: 75px;
+    padding-left: 10px;
+   
+    
+}
+
+
+
+.container .fieldset-three input
+{
+    width: 90px;
+}
+
+.container .fieldset-three span
+{
+    margin-left: 110px;
+}
+
+.container .calculate-btn
+{
+    all: unset;
+    height: 40px;
+    width: 100%;
+    color: aliceblue;
+    background-color: #131418;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    cursor: pointer;
+    position: relative;
+    top: 13px;
+    transition: background-color 0.3s ease;
+}
+
+
+.container .result
+{
+    margin-top: 40px;
+    
+    height: 190px;
+    width: 100%;
+    border-radius:3px;
+    padding: 10px;
+    display: flex;
+}
+
+
+.container table
+{
+    border-collapse:collapse ;
+    width: 100%;
+
+}
+
+.container table tr td
+{
+    padding: 8px;
+    border-bottom: 1px solid grey;
+    font-size: 16px;
+
+}
+
+.container table tr td:nth-child(even)
+{
+    color: black;
+    text-align: center;
+    padding-left:15px ;
+}
+
+.container table tr td:nth-child(odd)
+{
+    color: black;
+    font-size: 13px;
+}
