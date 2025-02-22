@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+
+<style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Arial', sans-serif;
+        background-color: #f4f4f4;
+    }
+
+    /* Header Styling */
+    #main {
+        width: 80%;
+    height: 100px;
+    padding: 20px;
+    background: #343a40;
+    font-size: 50px;
+    text-align: center  ;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    border-radius: 10px;
+    color: #e9ecef;
+    margin: auto;
+    margin-top: 20px;
+    }
+
+    /* Main Content Container */
+    #content {
+        width: 80%;
+        margin: 40px auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    /* Box Styling */
+    .con, .con2 {
+        width: 22%; /* Adjusted width for better responsiveness */
+        height: 60px;
+        background-color: #212529;
+        border-radius: 10px;
+        margin: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.3s, box-shadow 0.3s;
+        position: relative;
+        cursor: pointer;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adding shadow */
+    }
+
+    /* Hover Effect */
+    .con:hover, .con2:hover {
+        transform: translateY(-5px); /* Lift effect */
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+    }
+
+    /* Link Styling */
+    .name a, .name2 a {
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 18px;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .con, .con2 {
+            width: 45%; /* Adjust width for smaller screens */
+            height: 70px;
+        }
+        #main {
+            font-size: 40px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .con, .con2 {
+            width: 80%; /* For mobile view */
+            height: 80px;
+        }
+        #main {
+            font-size: 35px;
+            height: 80px;
+            padding: 10px;
+        }
+    }
+
+</style>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
+        <div class="container ">
+            <a class="navbar-brand fs-1 fw-bolder " href="#">Mobile Apps</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse " id="navbarNav">
+                <ul class="navbar-nav ms-auto fs-5 light-text" id="nav-color">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                      <a class="nav-link" href="#about">About</a>
+                  </li>
+
+
+                    <li class="nav-item ">
+                      <a class="nav-link " href="project.html"   aria-expanded="false">
+                        Projects
+                      </a>
+                   
+
+                    <li class="nav-item">
+                      <a class="nav-link" href="practice.html">Practice Work</a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link" href="mobileapp.html">Mobile Apps</a>
+                </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+<div id="content">
+   
+    <div class="con"><h2 class="name"><a href="calculator.html">Calculator</a></h2></div>
+    <div class="con"><h2 class="name"><a href="age-calculator.html">Age Calculator</a></h2></div>
+    <div class="con"><h2 class="name"><a href="loan-calculator.html">Loan Calculator</a></h2></div>
+          
+
+</div>
+    
+</body>
+
+
+  
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</html>
