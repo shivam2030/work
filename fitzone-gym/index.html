@@ -175,19 +175,12 @@
   <script>
 const menuBtn = document.getElementById('menuBtn');
 const nav = document.getElementById('navLinks');
-const overlay = document.getElementById('overlay');
 
 menuBtn.addEventListener('click', () => {
   nav.classList.toggle('active');
-  overlay.classList.toggle('show');
   menuBtn.textContent = nav.classList.contains('active') ? '✖' : '☰';
 });
 
-overlay.addEventListener('click', () => {
-  nav.classList.remove('active');
-  overlay.classList.remove('show');
-  menuBtn.textContent = '☰';
-});
 
     //successfully pop up 
 
