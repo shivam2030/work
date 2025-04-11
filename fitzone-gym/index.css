@@ -78,17 +78,6 @@ body {
   z-index: 1001;
 }
 
-.top
-{
-  position: relative;
-  top: 200px;
-  
-}
-
-.arrow
-{
-  wid
-}
 
 /* Hero Section */
 .hero {
@@ -378,7 +367,7 @@ body {
     top: 70px;
     right: 0;
     width: 220px;
-    height: 95vh;
+    height: 105vh;
     background-color: #7dfc00;
     padding: 40px 20px;
     gap: 30px;
