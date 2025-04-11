@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FitZone</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+ <!-- Navbar -->
+
+
+
+ <a name="hero-section">
+ <nav class="navbar">
+  <div class="logo">FitZone</div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#hero-section">Home</a></li>
+    <li><a href="#about-section">About</a></li>
+    <li><a href="#plans-section">Plans</a></li>
+    <li><a href="#contact-section">Book Now</a></li>
+    <li><a href="#footer">Contact</a></li>
+  </ul>
+  <div class="menu-link" id="menuBtn" >☰</div>
+</nav>
+
+
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Transform Your Body, Elevate Your Life</h1>
+      <p>Join FitZone – Your Personalized Fitness Journey Starts Today</p>
+      <a href="#about-section" class="btn">Start Your Journey</a>
+    </div>
+  </section>
+   <!-- Hero Section End -->
+
+
+  <!-- About Section -->
+  <a name="about-section">
+
+  <section class="about reveal">
+    <div class="intro">
+      <h1>About Me</h1>
+      <p>John DSouza, a certified Personal Trainer, with over 5 years of experience</p>
+      <ul>
+        <li>✅ ACE Certified Trainer</li>
+        <li>🧑‍🏫 Trained 100+ clients</li>
+        <li>👥 One-on-one & group sessions</li>
+        <li>📍 Available for online and offline coaching</li>
+      </ul>
+    </div>
+    <div class="trainer">
+      <img class="trainer-img" src="image/trainer.jpg" />
+    </div>
+  </section>
+   <!-- About Section end -->
+
+
+
+    <!-- choose plan Section -->
+  <a name="plans-section">
+    <section class="choose">
+     
+        <h1>Choose Your Plan</h1>
+        <p>No matter your level, there’s a perfect plan for you.</p>
+     
+    </section>
+
+    <!-- choose plan card Section -->
+
+    <section class="card">
+      <div class="cards">
+        <img class="fit" src="image/flame.png">
+        <h2> Fat Burn Program</h2>
+        <p>🏃‍♂️ HTT + 🍎 Nutrition (4 weeks)</p>
+      </div>
+
+      <div class="cards">
+        <img class="fit" src="image/dumbbell.png">
+        <h2>Muscle Building</h2>
+        <p>💪 Strength & 🧱 Resistance (5 weeks)</p>
+      </div>
+
+      <div class="cards">
+        <img class="fit" src="image/laptop.png">
+        <h2>Online Coaching</h2>
+        <p>📞 Weekly video calls + 📋 Diet plan</p>
+      </div>
+
+      <div class="cards">
+        <img class="fit" src="image/exercise.png">
+        <h2>Yoga & Flexibility</h2>
+        <p>🧘‍♂️ Mindful stretching & 🌀 Balance</p>
+      </div>
+      
+    </section>
+     <!-- choose plan card end Section -->
+     <a name="contact-section">
+
+   
+      <!-- contact Section -->
+      <section class="choose">
+        <h1>📅 Book Your Session</h1>
+        <p>Let us help you reach your fitness goals!</p>
+      </section>
+
+
+    <section class="contact" id="contact-section">
+
+      <input type="text" placeholder="Your Name">
+      <input type="email" placeholder="Your Email">
+      <input type="text" placeholder="Your Goal (e.g. weight loss)">
+
+      <select>
+        <option selected disabled>Select Time Slot</option>
+        <option> 6 AM - 7 AM</option>
+        <option> 7 AM - 8 AM</option>
+        <option>Evening 5 PM - 6PM</option>
+      </select>
+
+      <textarea placeholder="Any special instruction?" rows="4"></textarea>
+      <button class="book-btn" onclick="showSuccess()">📩 Book Now</button>
+
+      <div class="success-message" id="successMsg">✓ Booking Confirmed! We'll contact you soon.</div>
+  </section>
+
+
+ <!-- Footer Section -->
+  
+  <footer class="footer">
+    <div class="footer-top">
+      <h2>🏋️‍♂️ FitWithMe</h2>
+      <p>Transforming lives through strength, discipline & dedication.</p>
+    </div>
+    
+  <div class="footer-links">
+    <div>
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#hero-section">Home</a></li>
+        <li><a href="#about-section">About</a></li>
+        <li><a href="#plans-section">Plans</a></li>
+        <li><a href="#contact-section">Book Now</a></li>
+      </ul>
+    </div>
+  
+    <div>
+      <h4>Follow Me</h4>
+      <ul class="socials">
+        <li><a href="#"><span>📸</span> Instagram</a></li>
+        <li><a href="#"><span>▶️</span> YouTube</a></li>
+        <li><a href="#"><span>💬</span> WhatsApp</a></li>
+      </ul>
+    </div>
+    
+    <div>
+      <h4>Contact</h4>
+      <p>📞 +91 99999 99999</p>
+      <p>📧 fitness@youremail.com</p>
+    </div>
+  </div>
+ 
+  <div class="footer-bottom">
+    <p>© 2025 FitWithMe. All rights reserved.</p>
+  </div>
+  </footer>
+  <a name="footer">
+
+
+
+  <!-- JS -->
+  <script>
+const menuBtn = document.getElementById('menuBtn');
+const nav = document.getElementById('navLinks');
+const overlay = document.getElementById('overlay');
+
+menuBtn.addEventListener('click', () => {
+  nav.classList.toggle('active');
+  overlay.classList.toggle('show');
+  menuBtn.textContent = nav.classList.contains('active') ? '✖' : '☰';
+});
+
+overlay.addEventListener('click', () => {
+  nav.classList.remove('active');
+  overlay.classList.remove('show');
+  menuBtn.textContent = '☰';
+});
+
+    //successfully pop up 
+
+    function showSuccess() {
+    const msg = document.getElementById('successMsg');
+    msg.style.display = 'block';
+
+    // Auto-hide after 4s
+    setTimeout(() => {
+      msg.style.display = 'none';
+    }, 4000);
+  }
+ 
+
+ 
+  </script>
+</body>
+</html>
