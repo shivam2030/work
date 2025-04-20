@@ -35,460 +35,246 @@ nav ul {
 }
 
 
+.navbar {
+    background: linear-gradient(120deg, #0a0f1c, #121e2c); /* Same background as skills section */
+    backdrop-filter: blur(12px);  /* Optional: If you want a glassmorphism effect */
+}
 
-#container {  
-            display: flex;  
-            align-items: center;  
-            margin: 40px 0;  
-            max-width: 1200px; 
-            width: 80%; 
-            height: 400px;
-            padding: 20px;  
-            border-radius: 8px;  
-            background-color: white; /* White container */  
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); 
-            margin: auto; 
-            margin-top: 20px; 
-        }  
+.navbar-nav .nav-link {
+    color: #d1d1d1; /* Light text color */
+    font-size: 1.1rem;
+}
 
-        #detail {  
-            flex: 1;  
-            text-align: left;  
-            padding: 20px;  
-        }  
-
-        .quote {  
-            font-size: 36px;  
-            color: #212529; /* Dark Text Color */  
-            margin: 0;  
-        }  
-
-        .description {  
-            font-size: 20px;  
-            color: #6c757d; /* Gray Text */  
-            margin: 10px 0; 
-            margin-bottom: 80px;  
-        }  
-
-        #image-container {  
-            flex: 1;  
-            text-align: center;  
-        }  
-
-        .pic {  
-            width: 250px;  
-            height: auto;  
-            border-radius: 50%;  
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);  
-            transition: transform 0.3s;  
-        }  
-
-        .pic:hover {  
-            transform: scale(1.1); /* Scale effect on hover */  
-            box-shadow: 5px 5px 20px #343a40;
-            cursor: pointer;
-        }  
-
-        #social {  
-            margin-top: 20px;
-        }  
-
-        .social-icons {  
-            margin-top: 10px;  
-            margin-left: -14px;  
-        }  
-
-        .social-icons a {  
-            text-decoration: none;  
-            color: #343a40; /* Dark color for icons */  
-            margin: 0 15px;  
-            font-size: 26px;  
-            transition: color 0.3s, transform 0.3s;  
-        }  
-
-        .social-icons a:hover {  
-            color: #5f6a75; /* Hover color */  
-            transform: translateY(-3px); /* Move up effect */  
-        }  
-
-        #about {
-            width: 60%;
-            padding: 20px;
-            background-color: #343a40;
-            border-radius: 10px;
-            text-align: center;
-            margin-bottom: 40px;
-            margin: auto; 
-        }
-
-        #about h1 {
-            font-size: 40px;
-            color: white;
-            margin: 0;
-            cursor: pointer;
-            
-        }
-
-        #ab {
-            width: 80%;
-            background-color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 30px;
-            margin-bottom: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); 
-            margin: auto; 
-            margin-top: 20px;
-        }
-
-        .ab1 {
-            font-size: 18px;
-            color: #343a40;
-            text-align: justify;
-            line-height: 1.6;
-            font-weight: lighter; /* Lighter font */
-        }
-
-        #add {  
-            display: flex;  
-            align-items: baseline;
-            
-            justify-content: center;
-            text-align: center;
-            margin: 40px 0;  
-            max-width: 1000px; 
-            width: 80%; 
-            height: 250px;
-            padding: 15px;  
-            border-radius: 8px;  
-            background-color: white; /* White container */  
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);  
-            margin: auto; 
-            margin-top: 20px;
-        } 
-
-        #skill
-        {
-            background-color:#343a40 ;
-            border-radius: 10px;
-            width: 60%;
-            padding: 10px;
-            margin: auto; 
-            margin-top: 20px;
-          
-        }
-
-        .ab2
-        {
-            color: white;
-            text-align: center;
-            
-        }
+.navbar-nav .nav-link:hover {
+    color: #aeea00; /* Highlight color when hovering */
+}
 
 
-        .pc, .pc2{
-            width: 150px;
-            height: 150px;
-            transition: 0.3s;
-            
-        }
-
-     
-
-        .pc:hover, .pc2:hover {
-            filter: drop-shadow(2px 2px 15px #343a40);
-            transform: scale(1.1);
-            cursor: pointer;
-        }
-
-        footer {
-            width: 100%;
-            height: 200px;
-            background-color: #343a40;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            margin-top: 20px;
-        }
-
-        footer a {
-            color: #e9ecef;
-            text-decoration: none;
-            font-size: 50px;
-        }
-
-        footer a:hover {
-            color: #d5e3ef; /* Hover effect color */
-            cursor: pointer;
-        }
-
-        #name {
-            color: #e9ecef;
-            font-size: 50px;
-        }
-
-        #name:hover {
-            color: #d5e3ef;
-            cursor: pointer;
-            text-decoration: none;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            #container {
-                flex-direction: column;
-                height: auto;
-                padding: 15px;
-            }
-
-            .quote {
-                font-size: 28px;
-            }
-
-            .description {
-                font-size: 16px;
-                margin-bottom: 40px;
-            }
-
-            .pic {
-                width: 200px;
-                
-            }
-
-            #add {
-                flex-direction: column;
-                height: auto;
-                gap: 20px;
-            }
-
-            .pc, .pc2 {
-                width: 100px;
-                height: 100px;
-            }
-        }
-
-        @media (max-width: 480px) {
-           
-
-        
-            .skills-container {
+    .hero-section {
+  min-height: 75vh;
+  padding: 20px 50px;
   display: flex;
-  flex-direction: column;
-  align-items: center; /* Images ko center karne ke liye */
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(120deg, #0a0f1c, #121e2c);
+  color: #fff;
+  flex-wrap: wrap;
+}
+
+.highlight-name {
+  display: inline-block;
+  color: #aeea00;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 4px 10px;
+  border-radius: 12px;
+  line-height: 1.4;
+}
+
+.hero-content {
+  flex: 1;
+  padding: 20px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.hero-content .highlight {
+  color: #aeea00;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 4px 1px;
+  border-radius: 12px;
+}
+
+.hero-subtext {
+  font-size: 1.2rem;
+  color: #d1d1d1;
+  margin-bottom: 30px;
+}
+
+.hero-btn {
+  padding: 12px 30px;
+  background: #aeea00;
+  color: #0a0f1c;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: 0.3s ease;
+}
+
+.hero-btn:hover {
+  background: #d4ff3f;
+  transform: scale(1.05);
+}
+
+.hero-img-glass {
+  flex: 1;
+  display: flex;
   justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.hero-img-glass img {
+  max-width: 250px;
+  width: 70%;
+  border-radius: 60px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+/* Skills Section */
+#skills {
+    padding: 50px 20px;
+    background: radial-gradient(circle at top left, #0a0f1c, #0d111b);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.skill-card {
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: aliceblue;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.skill-card img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+.skill-card span {
+    display: block;
+    color:black;
+    font-weight: 500;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.section-title {
+    font-size: 2rem;
+    color: #d4ff3f;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+
+.about-section {
+  padding: 50px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at top left, #0a0f1c, #0d111b);
+}
+
+
+.about-glass {
+  max-width: 700px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   text-align: center;
+  color: #ffffff;
+  transition: all 0.3s ease;
 }
 
-.skills-container img {
-  max-width: 100%; /* Responsive banane ke liye */
-  height: auto;
-  margin: 10px 0; /* Thoda spacing ke liye */
+.about-glass:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+}
+
+.about-glass h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  color: #d4ff3f;
+  font-weight: 600;
+}
+
+.about-glass p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 15px;
+  color: #e0e0e0;
+}
+
+.btn-glass {
+  margin-top: 20px;
+  padding: 12px 28px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #0a0f1c;
+  background: aliceblue;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-glass:hover {
+  background: #d4ff3f;
+  transform: scale(1.05);
 }
 
 
-            footer a {
-                font-size: 30px;
-            }
-
-            #container {  
-            display: flex;  
-            align-items: center;
-            margin: auto; 
-          
-            max-width: 1200px; 
-            width: 80%; 
-            height: 600px;
-            padding: 20px;  
-            border-radius: 8px;  
-            background-color: white; /* White container */  
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); 
-        }  
-
-        #detail {  
-            flex: 1;  
-            text-align: center;  
-            padding: 10px;
-            margin-top: 250px;  
-        }  
-
-        .quote {  
-            font-size: 20px;  
-            color: #212529; /* Dark Text Color */  
-            margin: 0;  
-        }  
-
-        .description {  
-            font-size: 18px;  
-            color: #6c757d; /* Gray Text */  
-            margin: 10px 0; 
-            margin-bottom: 80px;  
-        }  
-
-        
-        #image-container {  
-            flex: 1;  
-            text-align: center;  
-        }  
-
-        .pic {  
-            width: 200px;  
-            height: auto;  
-            position: relative;
-            top: -580px;
-            margin-left:0px ;
-            border-radius: 50%;  
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);  
-            transition: transform 0.3s;  
-        }  
-
-        .pic:hover {  
-            transform: scale(1.1); /* Scale effect on hover */  
-            box-shadow: 5px 5px 20px #343a40;
-            cursor: pointer;
-        }  
-
-        #social {  
-            margin-top: -60px;
-        }  
-
-        .social-icons {  
-            margin-top: -20px;  
-            margin-left: 3px;  
-           
-        }  
-
-        .social-icons a {  
-            text-decoration: none;  
-            color: #343a40; /* Dark color for icons */  
-            margin: 0 15px;  
-            font-size: 26px;  
-            transition: color 0.3s, transform 0.3s;  
-        }  
-
-        .social-icons a:hover {  
-            color: #5f6a75; /* Hover color */  
-            transform: translateY(-3px); /* Move up effect */  
-        }  
-
-        #about {
-            width: 60%;
-            padding: 20px;
-            background-color: #343a40;
-            border-radius: 10px;
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        #about h1 {
-            font-size: 40px;
-            color: white;
-            margin: 0;
-            cursor: pointer;
-        }
-
-        #ab {
-            width: 80%;
-            background-color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 30px;
-            margin-bottom: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); 
-        }
-
-        .ab1 {
-            font-size: 18px;
-            color: #343a40;
-            text-align: justify;
-            line-height: 1.6;
-            font-weight: lighter; /* Lighter font */
-        }
-
-        #add {  
-            display: flex;  
-            align-items: center;
-            justify-content: center;
-            flex-wrap: wrap;
-            text-align: center;
-            margin: 40px 0;  
-            max-width: 1000px; 
-            width: 80%; 
-            height: 400px;
-            padding: 15px;  
-            border-radius: 8px;  
-            background-color: white; /* White container */  
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);  
-            margin: auto; 
-            margin-top: 20px;
-        } 
-
-        #skill
-        {
-            background-color:#343a40 ;
-            
-            width: 100%;
-        }
-
-        .ab2
-        {
-            color: white;
-            text-align: center;
-        }
-
-   
-
-        .pc, .pc2, .pc3 {
-            width: 100px;
-            height: 150px;
-            transition: 0.3s;
-        }
-
-        .pc:hover, .pc2:hover {
-            filter: drop-shadow(2px 2px 15px #343a40);
-            transform: scale(1.1);
-            cursor: pointer;
-        }
-
-        footer {
-            width: 100%;
-            height: 100px;
-            background-color: #343a40;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            text-align: center;
-        }
-
-        footer a {
-            color: #e9ecef;
-            text-decoration: none;
-            font-size: 35px;
-        }
-
-        footer a:hover {
-            color: #d5e3ef; /* Hover effect color */
-            cursor: pointer;
-        }
-
-        #name {
-            color: #e9ecef;
-            font-size: 35px;
-        }
-
-        #name:hover {
-            color: #d5e3ef;
-            cursor: pointer;
-            text-decoration: none;
-        }
-        }
+@media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 25px 20px;
+    min-height: 20vh;
+  }
 
 
+
+  .hero-content {
+    padding: 5px;
+  }
+
+  .hero-content h1 {
+    font-size: 2.2rem;
+    line-height: 1.3;
+  }
+
+  .hero-subtext {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+
+  .hero-btn {
+    font-size: 0.95rem;
+    padding: 10px 24px;
+  }
+
+  .hero-img-glass img {
+    width: 75%;
+    max-width: 220px;
+    border-radius: 50px;
+  }
+}
 
 
 
@@ -533,61 +319,84 @@ nav ul {
         </div>
     </nav>
 
-
-    <div id="container">  
-      <div id="detail">    
-          <h1 class="quote">I'm a Creative <br/><span style="font-size: 50px;"> UI & UX Designer</span></h1>  
-          <p class="description">Bringing ideas to life through vibrant design and innovative thinking.</p> 
-          <div id="social">  
-              <h2 style="margin-bottom: 10px;">Social Media</h2>  
-              <div class="social-icons">  
-                  <a href="https://www.behance.net/shivamprajapati65" target="_blank"><i class="fab fa-behance"></i></a>  
-                  <a href="https://www.instagram.com/designnest_3d/?next=%2F" target="_blank"><i class="fab fa-instagram"></i></a>  
-                  <a href="https://www.linkedin.com/in/shivam-prajapati-9a0a16318/" target="_blank"><i class="fab fa-linkedin-in"></i></a>  
-              </div>  
-          </div>  
-      </div>  
-
-      <div id="image-container">  
-          <img class="pic" src="image/dp3.jpg" alt="Profile Picture">  
-      </div>  
-  </div>  
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1>
+                Hi, I'm <br><span class="highlight-name">Shivam Prajapati</span>
+              </h1>
+              
+          <p class="hero-subtext">A passionate UI/UX Designer & Frontend Developer from India 🇮🇳</p>
+          <a href="#projects" class="hero-btn">View My Work</a>
+        </div>
+        <div class="hero-img-glass">
+          <img src="image/dp3.jpg" alt="Shivam" />
+        </div>
+      </section>
+      
 
   <hr color="#343a40" size="2" width="100%"/>
 
   <!-- About Section -->
   <a id="about-section"></a>
-  <div id="about" class="bg-dark">
-      <h1>About</h1>
-  </div>
-  <div id="ab">
-      <p class="ab1">
-          Hi, I'm Shivam Prajapati, a creative graphic designer who is passionate about crafting meaningful and visually appealing designs. I believe in bringing concepts to life that not only look great but also communicate effectively. With expertise in Photoshop, Illustrator, and other design tools, I aim to create designs that leave a lasting impression.
-      </p>
-  </div>
-
+  
+  <section class="about-section">
+    <div class="about-glass">
+      <h2>🙋‍♂️ About Me</h2>
+      <p>Hi, I’m <strong>Shivam Prajapati</strong> — a creative soul with a deep passion for design and storytelling.</p>
+      <p>I started my journey as a curious learner, exploring how visuals speak louder than words. Over time, I fell in love with creating digital experiences that feel simple, elegant, and impactful.</p>
+      <p>Whether it’s designing a user interface or editing a short film, I believe in crafting things with heart and detail.</p>
+      <p>When I’m not designing, you’ll find me exploring ideas, improving my skills, or simply enjoying the calm moments with creative inspiration.</p>
+      <button class="btn-glass">Let’s Connect</button>
+    </div>
+  </section>
+  
+  <hr color="#343a40" size="2" width="100%"/>
   <!-- Skills Section -->
-  <a id="skills-section"></a>
-  <div id="skill" class="bg-dark">
-      <h1 class="ab2">Skills</h1>
-  </div>
-
-    <div id="add" >
-
-        <div class="pc"> <img src="image/ht.png"></div>
-        <div class="pc2"> <img src="image/cs.png"></div>
-
-     </div>
+  <section id="skills" class="section">
+    <div class="container">
+      <h2 class="section-title">🛠️ Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" />
+          <span>HTML5</span>
+        </div>
+        <div class="skill-card">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" />
+          <span>CSS3</span>
+        </div>
+        <div class="skill-card">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" />
+          <span>JavaScript</span>
+        </div>
+        <div class="skill-card">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap" />
+          <span>Bootstrap</span>
+        </div>
+        <div class="skill-card">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma" />
+          <span>Figma</span>
+        </div>
+        <div class="skill-card">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg" alt="Photoshop" />
+          <span>Photoshop</span>
+        </div>
+        <div class="skill-card">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/illustrator/illustrator-plain.svg" alt="Illustrator" />
+          <span>Illustrator</span>
+        </div>
+        <div class="skill-card">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/aftereffects/aftereffects-original.svg" alt="After Effects" />
+          <span>After Effects</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <hr color="#343a40" size="2" width="100%"/>
 
   <footer class="bg-dark">
       <h1 id="name"><a href="#footer">Shivam Prajapati</a></h1>
   </footer>
-
-
-
-
-
-
 
 
 
