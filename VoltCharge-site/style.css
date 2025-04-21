@@ -705,7 +705,7 @@
       top: 100%;
       right: -220px;
       width: 220px;
-      height: 78vh;
+      height: 80vh;
       background: rgba(30, 30, 30, 0.6); /* Dark transparent background */
       backdrop-filter: blur(12px);      
       flex-direction: column;
