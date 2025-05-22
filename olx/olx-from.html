@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OLX Style Post Ad Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1>Post your Ad</h1>
+        <form action="#">
+            <div class="section">
+                <h2>SELECTED CATEGORY</h2>
+                <p>Properties / For Sale: Houses & Apartments</p>
+                <button class="change-category">Change</button>
+            </div>
+
+            <div class="section">
+                <h2>Include some details</h2>
+                <label for="type">Type *</label>
+                <select id="type" name="type">
+                    <option value="flats">Flats / Apartments</option>
+                    <option value="independent">Independent / Builder Floors</option>
+                    <option value="farm-house">Farm House</option>
+                    <option value="house-villa">House & Villa</option>
+                </select>
+
+                <label for="bhk">BHK *</label>
+                <select id="bhk" name="bhk">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="4+">4+</option>
+                </select>
+
+                <label for="bathrooms">Bathrooms *</label>
+                <select id="bathrooms" name="bathrooms">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="4+">4+</option>
+                </select>
+
+                <label for="furnishing">Furnishing *</label>
+                <select id="furnishing" name="furnishing">
+                    <option value="furnished">Furnished</option>
+                    <option value="semi-furnished">Semi-Furnished</option>
+                    <option value="unfurnished">Unfurnished</option>
+                </select>
+
+                <label for="project-status">Project Status *</label>
+                <select id="project-status" name="project-status">
+                    <option value="new-launch">New Launch</option>
+                    <option value="ready-to-move">Ready to Move</option>
+                    <option value="under-construction">Under Construction</option>
+                </select>
+
+                <label for="super-area">Super Builtup area (sqft) *</label>
+                <input type="number" id="super-area" name="super-area" required>
+
+                <label for="carpet-area">Carpet Area (sqft) *</label>
+                <input type="number" id="carpet-area" name="carpet-area" required>
+
+                <label for="maintenance">Maintenance (Monthly)</label>
+                <input type="number" id="maintenance" name="maintenance">
+
+                <label for="floor-no">Floor No</label>
+                <input type="number" id="floor-no" name="floor-no">
+
+                <label for="car-parking">Car Parking</label>
+                <select id="car-parking" name="car-parking">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="3+">3+</option>
+                </select>
+
+                <label for="facing">Facing</label>
+                <select id="facing" name="facing">
+                    <option value="north">North</option>
+                    <option value="south">South</option>
+                    <option value="east">East</option>
+                    <option value="west">West</option>
+                </select>
+
+                <label for="project-name">Project Name</label>
+                <input type="text" id="project-name" name="project-name">
+
+                <label for="ad-title">Ad title *</label>
+                <input type="text" id="ad-title" name="ad-title" required>
+
+                <label for="description">Description *</label>
+                <textarea id="description" name="description" required></textarea>
+            </div>
+
+            <div class="section">
+                <h2>Set a Price</h2>
+                <label for="price">Price *</label>
+                <input type="number" id="price" name="price" required>
+            </div>
+
+            <div class="section">
+                <h2>Upload up to 20 Photos</h2>
+                <input type="file" id="upload-photos" name="photos[]" multiple accept="image/*">
+            </div>
+
+            <div class="section">
+                <h2>Confirm your Location</h2>
+                <select id="state" name="state" required>
+                    <option value="">Select State</option>
+                    <option value="state1">State 1</option>
+                    <option value="state2">State 2</option>
+                </select>
+            </div>
+
+            <div class="section">
+                <h2>Review your Details</h2>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" value="OLX User" readonly>
+
+                <label for="phone-number">Your phone number</label>
+                <input type="text" id="phone-number" name="phone-number" value="+918766202508" readonly>
+            </div>
+
+            <div class="cta">
+                <button type="submit" class="post-button">Post Now</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
